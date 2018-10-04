@@ -41,7 +41,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-button, li, a, input[type="submit"] {
+button, li, a, input[type="submit"], span {
   cursor: pointer; }
 
 button:focus, input:focus {
@@ -59,6 +59,8 @@ button:focus, input:focus {
   font-size: 1em;
   color: white;
   background-image: linear-gradient(to right, #F070A1, #16FFBD); }
+  #navBar #name {
+    cursor: pointer; }
   #navBar #contactInfo {
     display: flex;
     flex-direction: row;
@@ -67,6 +69,46 @@ button:focus, input:focus {
     width: 30%; }
     #navBar #contactInfo div {
       margin: 6% 10%; }
+
+#natalyModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8); }
+  #natalyModal #nataly {
+    width: 50%;
+    margin: 5% auto;
+    font-weight: normal;
+    line-height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end; }
+  #natalyModal #close {
+    font-size: 3em; }
+  #natalyModal #close:hover {
+    font-size: 3.5em;
+    color: #F070A1; }
+  #natalyModal div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; }
+  #natalyModal div img {
+    width: 25%;
+    height: 25%; }
+  #natalyModal div p {
+    border-left: 5px solid #F070A1;
+    margin: 0% 5%;
+    padding-left: 5%; }
 
 #Body {
   display: flex;
