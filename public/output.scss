@@ -58,7 +58,6 @@ button:focus, input:focus {
 
 #navBar {
   width: auto;
-  height: 60px;
   padding: 0 5%;
   display: flex;
   flex-direction: row;
@@ -137,23 +136,22 @@ button:focus, input:focus {
   text-decoration: underline;
 }
 
-#content {
+#Body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-#content #timeLine {
+#Body #timeLine {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-end;
   width: 100%;
-  margin: 50px auto;
+  margin: 3% auto;
   height: 2px;
   background-color: #16FFBD;
   list-style: none;
 }
-#content #timeLine li {
+#Body #timeLine li {
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -162,45 +160,24 @@ button:focus, input:focus {
   color: #16FFBD;
   font-weight: bolder;
   font-size: 2em;
-  margin-bottom: -13px;
 }
-#content #timeLine li label {
+#Body #timeLine li:hover {
+  color: #F070A1;
+}
+#Body #timeLine li label {
   font-size: 0.5em;
 }
-#content #timeLine .selected {
-  color: #F070A1;
-}
-#content #timeLine li:hover {
-  color: #F070A1;
-}
-#content #timeline-content {
-  margin: auto;
-  width: 70%;
-  height: 200px;
-  border-top: 2px solid #F070A1;
-  border-bottom: 2px solid #F070A1;
+#Body #timeline-content {
+  margin: 2% auto;
+  width: 100%;
+  height: 500px;
+  border-top: 2px solid #16FFBD;
+  border-bottom: 2px solid #16FFBD;
   align-content: center;
 }
-#content #timeline-content div {
-  display: block;
-  width: 50%;
-}
-#content #timeline-content .hidden {
+#Body #timeline-content .timeline-item {
   display: none;
   width: 50%;
 }
-#content #skills {
-  margin: 3px auto;
-  width: 70%;
-  background: #F070A1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-#content #skills div {
-  color: white;
-  padding: 2%;
-  text-align: center;
-}
 
-/*# sourceMappingURL=output.css.map */
+/*# sourceMappingURL=output.scss.map */
