@@ -1,3 +1,15 @@
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
 #navBar {
   width: auto;
   height: 80px;
@@ -12,9 +24,10 @@
 
 
   #name {
-    cursor:pointer;
+    cursor: pointer;
     font-size: 150%;
     color: white;
+    animation: bounceIn 5s infinite linear;
   }
   
   #contactInfo {
