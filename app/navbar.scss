@@ -1,31 +1,31 @@
 #navBar {
   width: auto;
   height: 80px;
-  padding: 0 5% 40px 5%;
+  padding: 0 10% 30px 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: none;
   font-weight: 600;
-  font-size: 1em;
-  color: white;
   background-image: linear-gradient(20deg, #16F, #F07);
 
 
   #name {
     cursor:pointer;
+    font-size: 150%;
+    color: white;
   }
   
   #contactInfo {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 20%;
+    justify-content: flex-end;
 
     div {
-      margin: 6% 10%;
+      margin: 6% 5%;
     }
   }
 
@@ -81,6 +81,8 @@
       border-left: 5px solid #F070A1;
       margin: 0% 5%;
       padding-left: 5%;
+      font-size: 60%;
+      line-height: 200%;
     }
 
     div p a {
