@@ -17,6 +17,8 @@ time, mark, audio, video {
   font-size: 100%;
   font-family: "Montserrat", sans-serif;
   vertical-align: baseline;
+  text-decoration: none;
+  color: white;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -58,8 +60,8 @@ button:focus, input:focus {
 
 #navBar {
   width: auto;
-  height: 60px;
-  padding: 0 5%;
+  height: 80px;
+  padding: 0 5% 40px 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -68,7 +70,7 @@ button:focus, input:focus {
   font-weight: 600;
   font-size: 1em;
   color: white;
-  background-image: linear-gradient(to right, #F070A1, #16FFBD);
+  background-image: linear-gradient(20deg, #16F, #F07);
 }
 #navBar #name {
   cursor: pointer;
@@ -141,6 +143,7 @@ button:focus, input:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background-image: linear-gradient(20deg, #F07, #16F);
 }
 #content #timeLine {
   display: flex;
@@ -148,7 +151,7 @@ button:focus, input:focus {
   justify-content: space-evenly;
   align-items: flex-end;
   width: 100%;
-  margin: 50px auto;
+  margin: 0px auto;
   height: 2px;
   background-color: #16FFBD;
   list-style: none;
@@ -165,7 +168,8 @@ button:focus, input:focus {
   margin-bottom: -13px;
 }
 #content #timeLine li label {
-  font-size: 0.5em;
+  font-size: 0.4em;
+  color: #16FFBD;
 }
 #content #timeLine .selected {
   color: #F070A1;
@@ -178,9 +182,8 @@ button:focus, input:focus {
   margin: auto;
   width: 70%;
   height: 200px;
-  border-top: 2px solid #F070A1;
-  border-bottom: 2px solid #F070A1;
   align-content: center;
+  color: #FFF;
 }
 #content #timeline-content div {
   width: 70%;
@@ -210,7 +213,7 @@ button:focus, input:focus {
 #content #skills {
   margin: 3px auto;
   width: 70%;
-  background: #F070A1;
+  background: #16FFBD;
   display: flex;
   flex-direction: row;
   justify-content: center;

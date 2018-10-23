@@ -1,7 +1,7 @@
 #navBar {
   width: auto;
-  height: 60px;
-  padding: 0 5%;
+  height: 80px;
+  padding: 0 5% 40px 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   font-weight: 600;
   font-size: 1em;
   color: white;
-  background-image: linear-gradient(to right, #F070A1 , #16FFBD);
+  background-image: linear-gradient(20deg, #16F, #F07);
 
 
   #name {
