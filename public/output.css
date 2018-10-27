@@ -112,7 +112,7 @@ button:focus, input:focus {
   height: 100%;
   overflow: auto;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 #natalyModal #nataly {
   width: 50%;
@@ -242,6 +242,8 @@ button:focus, input:focus {
   text-align: center;
   font-size: 100%;
   font-weight: 400;
+  border-top: 2px solid #16FFBD;
+  border-bottom: 2px solid #16FFBD;
 }
 
 #projects-section {
