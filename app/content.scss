@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-image: linear-gradient(20deg, #F07, #16F);
+  background-image: linear-gradient(167deg, #F07, #16F);
 
   #timeLine {
     display: flex;
@@ -83,16 +83,16 @@
 
 #skills {
   width: 100%;
-  background: #16FFBD;
+  background-image: linear-gradient(90deg, #F07 -61%, #16F);
   display: flex;
   flex-direction: row;
   justify-content: center;
 
   div {
-    color: #F070A1;
+    color: #16FFBD;
     padding: 1%;
     text-align: center;
-    font-size: 80%;
+    font-size: 100%;
     font-weight: 400;
   }
 }

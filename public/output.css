@@ -88,7 +88,7 @@ button:focus, input:focus {
   animation: bounceIn 5s infinite linear;
 }
 #navBar #name2:hover {
-  color: #F070A1;
+  color: #16FFBD;
   animation: bounceIn 0s;
 }
 #navBar #contactInfo {
@@ -161,7 +161,7 @@ button:focus, input:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-image: linear-gradient(20deg, #F07, #16F);
+  background-image: linear-gradient(167deg, #F07, #16F);
 }
 #content #timeLine {
   display: flex;
@@ -231,17 +231,59 @@ button:focus, input:focus {
 
 #skills {
   width: 100%;
-  background: #16FFBD;
+  background-image: linear-gradient(90deg, #F07 -61%, #16F);
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 #skills div {
-  color: #F070A1;
+  color: #16FFBD;
   padding: 1%;
   text-align: center;
-  font-size: 80%;
+  font-size: 100%;
   font-weight: 400;
+}
+
+#projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(27deg, #F07, #16F);
+}
+#projects-section h1 {
+  font-family: "Bad Script", cursive;
+  font-size: 300%;
+  padding: 40px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  font-weight: 100;
+}
+#projects-section #projects {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+}
+#projects-section #projects div {
+  height: 300px;
+  width: 250px;
+  line-height: 150%;
+  font-weight: 200;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#projects-section #projects div h2 {
+  font-size: 100%;
+}
+#projects-section #projects div img {
+  width: 80px;
+}
+#projects-section #projects div p {
+  font-size: 80%;
+  padding: 5px 10px;
 }
 
 /*# sourceMappingURL=output.css.map */
