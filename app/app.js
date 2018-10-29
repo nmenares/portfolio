@@ -11,8 +11,12 @@ function getAPI(e) {
 var canvas = document.getElementById("name2");
 var ctx = canvas.getContext("2d");
 canvas.addEventListener("mousemove", makeTransparent);
+
 ctx.fillStyle = "#FFFFFF";
 ctx.fillRect(0, 0, 500, 500);
+ctx.fillStyle = "blue";
+ctx.font = "48px serif";
+ctx.fillText("Nataly Menares", 250, 250);
 
 function makeTransparent(e){
   e.preventDefault();
