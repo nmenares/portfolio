@@ -18,7 +18,7 @@ time, mark, audio, video {
   font-family: "Montserrat", sans-serif;
   vertical-align: baseline;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -58,38 +58,21 @@ button:focus, input:focus {
   outline: 0;
 }
 
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
 #navBar {
   width: auto;
   height: 80px;
-  padding: 0 10% 30px 10%;
+  padding: 0 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: none;
   font-weight: 600;
-  background-image: linear-gradient(20deg, #16F, #F07);
+  background-color: blue;
 }
 #navBar #name2 {
-  cursor: pointer;
-  font-size: 180%;
-  color: white;
-  animation: bounceIn 5s infinite linear;
-}
-#navBar #name2:hover {
-  color: #16FFBD;
-  animation: bounceIn 0s;
+  height: 500px;
+  width: 500px;
 }
 #navBar #contactInfo {
   display: flex;
@@ -129,7 +112,7 @@ button:focus, input:focus {
 }
 #natalyModal #close:hover {
   font-size: 3.5em;
-  color: #F070A1;
+  color: black;
 }
 #natalyModal div {
   width: 100%;
@@ -144,14 +127,14 @@ button:focus, input:focus {
   height: 25%;
 }
 #natalyModal div p {
-  border-left: 5px solid #F070A1;
+  border-left: 5px solid black;
   margin: 0% 5%;
   padding-left: 5%;
   font-size: 100%;
   line-height: 200%;
 }
 #natalyModal div p a {
-  color: #F070A1;
+  color: black;
 }
 #natalyModal div p a:hover {
   text-decoration: underline;
@@ -161,7 +144,6 @@ button:focus, input:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-image: linear-gradient(167deg, #F07, #16F);
 }
 #content #timeLine {
   display: flex;
@@ -171,7 +153,7 @@ button:focus, input:focus {
   width: 100%;
   margin: 0px auto;
   height: 2px;
-  background-color: #16FFBD;
+  background-color: black;
   list-style: none;
 }
 #content #timeLine li {
@@ -180,39 +162,34 @@ button:focus, input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  color: #16FFBD;
+  color: white;
   font-weight: bolder;
   font-size: 2em;
   margin-bottom: -13px;
 }
 #content #timeLine li label {
   font-size: 0.4em;
-  color: #16FFBD;
+  color: white;
 }
 #content #timeLine .selected {
-  color: #F070A1;
+  color: black;
 }
 #content #timeLine li:hover {
-  color: #F070A1;
+  color: black;
 }
 #content #timeline-content {
   display: flex;
   margin: auto;
-  width: 70%;
   height: 200px;
   align-content: center;
-  color: #FFF;
 }
 #content #timeline-content div {
-  width: 70%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 #content #timeline-content div h1 {
-  width: 100%;
   text-align: center;
   font-size: 2em;
   line-height: 2em;
@@ -231,30 +208,28 @@ button:focus, input:focus {
 
 #skills {
   width: 100%;
-  background-image: linear-gradient(90deg, #F07 -61%, #16F);
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 #skills div {
-  color: #16FFBD;
+  color: black;
   padding: 1%;
   text-align: center;
   font-size: 100%;
   font-weight: 400;
-  border-top: 2px solid #16FFBD;
-  border-bottom: 2px solid #16FFBD;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 #projects-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(27deg, #F07, #16F);
 }
 #projects-section h1 {
   font-family: "Bad Script", cursive;
-  font-size: 300%;
+  font-size: 200%;
   padding: 40px;
   padding-bottom: 10px;
   text-decoration: underline;
@@ -265,6 +240,7 @@ button:focus, input:focus {
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
+  width: 90%;
 }
 #projects-section #projects div {
   height: 300px;

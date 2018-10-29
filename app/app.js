@@ -8,6 +8,24 @@ function getAPI(e) {
     .then(data => default_content.appendChild(quote).innerHTML = `${data.contents.quotes[0].quote} - ${data.contents.quotes[0].author}`)
 };
 
+var canvas = document.getElementById("name2");
+var ctx = canvas.getContext("2d");
+canvas.addEventListener("mousemove", makeTransparent);
+ctx.fillStyle = "#FFFFFF";
+ctx.fillRect(0, 0, 500, 500);
+
+function makeTransparent(e){
+  e.preventDefault();
+  let pos_x = e.screenX;
+  let pos_y = e.screenY;
+  console.log(pos_x, pos_y);
+  ctx.globalCompositeOperation = "destination-out";
+  ctx.fillStyle = "#0066FF";
+  ctx.beginPath();
+  ctx.arc(pos_x - 150, pos_y + 100, 40, 0, 2 * Math.PI, true);
+  ctx.fill(); 
+}
+
 const name = document.getElementById("name");
 const natalyModal = document.getElementById("natalyModal");
 const span = document.getElementById("close");

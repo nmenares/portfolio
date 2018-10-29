@@ -13,8 +13,8 @@
 <body>
   <div id="navBar">
     <div id="name">
-      <div id="name2" style="font-family: 'Bad Script', cursive;">Nataly Menares</div>
-      <div id="natalyModal">
+      <canvas id="name2" width="500" height="500">Nataly</canvas>
+      <!-- <div id="natalyModal">
         <div id="nataly">
           <span id="close">&times;</span>
           <div>
@@ -28,33 +28,11 @@
           </div>
           <div style="margin-top: 5%; text-align: center">"Art without engineering is dreaming. Engineering without art is calculating" - Steven Roberts</div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div id="contactInfo">
       <div><a target="_blank" href="https://www.linkedin.com/in/nmenares/"><img style="width: 30px;" src="../public/github.png"></a></div>
       <div><a target="_blank" href="https://github.com/nmenares"><img style="width: 35px;" src="../public/linkedin.png"></a></div>
-    </div>
-  </div>
-  <div id="content">
-    <ol id="timeLine">
-      <li id="2012"><label>2012</label>&#9679</li>
-      <li id="2013"><label>2013</label>&#9679</li>
-      <li id="2014"><label>2014</label>&#9679</li>
-      <li id="2015"><label>2015</label>&#9679</li>
-      <li id="2016"><label>2016</label>&#9679</li>
-      <li id="2017"><label>2017</label>&#9679</li>
-      <li id="2018"><label>2018</label>&#9679</li>
-    </ol>
-    <div id="timeline-content">
-      <div id="tl-default">
-      </div>
-      <div class="hidden" id="tl-2012">2012</div>
-      <div class="hidden" id="tl-2013">2013</div>
-      <div class="hidden" id="tl-2014">2014</div>
-      <div class="hidden" id="tl-2015">2015</div>
-      <div class="hidden" id="tl-2016">2016</div>
-      <div class="hidden" id="tl-2017">2017</div>
-      <div class="hidden" id="tl-2018">2018</div>
     </div>
   </div>
   <div id="skills">
@@ -73,7 +51,6 @@
     <div>Spanish</div>
   </div>
   <div id="projects-section">
-    <h1>Projects</h1>
     <div id="projects">
       <div>
         <h2>Knitting With Strangers</h2>
@@ -97,10 +74,30 @@
       <div>Gallery</div>
     </div>
   </div>
-  <div id="footer" style="background-color: green">
+  <div id="content">
+    <ol id="timeLine">
+      <li id="2012"><label>2012</label>&#9679</li>
+      <li id="2013"><label>2013</label>&#9679</li>
+      <li id="2014"><label>2014</label>&#9679</li>
+      <li id="2015"><label>2015</label>&#9679</li>
+      <li id="2016"><label>2016</label>&#9679</li>
+      <li id="2017"><label>2017</label>&#9679</li>
+      <li id="2018"><label>2018</label>&#9679</li>
+    </ol>
+    <div id="timeline-content">
+      <div id="tl-default"></div>
+      <div class="hidden" id="tl-2012">2012</div>
+      <div class="hidden" id="tl-2013">2013</div>
+      <div class="hidden" id="tl-2014">2014</div>
+      <div class="hidden" id="tl-2015">2015</div>
+      <div class="hidden" id="tl-2016">2016</div>
+      <div class="hidden" id="tl-2017">2017</div>
+      <div class="hidden" id="tl-2018">2018</div>
+    </div>
+  </div>
+  <div id="footer" style="background-color: #16FFBD; display: flex; flex-direction: row; justify-content: space-around;">
     <div>email</div>
     <div>phone</div>
-    <div>resume</div>
   </div>
   <script src="app.js"></script>
 </body>
