@@ -7,98 +7,113 @@
   <link rel="stylesheet" href="../public/output.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
   <link rel="icon" href="../public/icon.ico" type="image/x-icon">
   <title>Nataly Menares</title>
 </head>
 <body>
   <div id="navBar">
     <div id="name">
-      <canvas id="name2" width="500" height="500">Nataly</canvas>
-      <!-- <div id="natalyModal">
-        <div id="nataly">
-          <span id="close">&times;</span>
-          <div>
-            <div style="display: flex; flex-direction: column; align-content: center"><img style="width: 300px;" src="../public/perfil.jpg"><p style="border: none; font-size: 0.5em">Oil Painting by Nataly Menares. <a>Gallery</a></p></div>
-            <p>I am from Chile, I moved to the States at the end of September 2016. 
-              My background is Industrial Engineering, actually I have worked as a Data Engineer (Kr Consulting), Data Analyst (Telefónica Chile), 
-              Project Manager (Telefónica Chile), and Marketing Engineer (SimpliRoute). 
-              This year I have been sharpened my coding skills in JavaScript, CSS, HTML, React-Redux.js, and Ruby, to increase the chances to get a job as an Engineer in Sillicon Valley. 
-              I developed 3 projects which you can check them out <a>here</a>.
-            </p>
-          </div>
-          <div style="margin-top: 5%; text-align: center">"Art without engineering is dreaming. Engineering without art is calculating" - Steven Roberts</div>
-        </div>
-      </div> -->
+      <img src="../public/menu.png">
     </div>
     <div id="contactInfo">
       <div><a target="_blank" href="https://www.linkedin.com/in/nmenares/"><img style="width: 30px;" src="../public/github.png"></a></div>
       <div><a target="_blank" href="https://github.com/nmenares"><img style="width: 35px;" src="../public/linkedin.png"></a></div>
     </div>
   </div>
-  <div id="skills">
-    <div>Tableau</div>
-    <div>Google Analytics</div>
-    <div>Adwords</div>
-    <div>SEO</div>
-    <div>SEM</div> 
-    <div>JavaScript</div>
-    <div>React-Redux.js</div>
-    <div>CSS</div>
-    <div>HTML</div>
-    <div>Ruby</div>
-    <div>Ruby on Rails</div>
-    <div>SQL</div>
-    <div>Spanish</div>
-  </div>
-  <div id="projects-section">
-    <div id="projects">
-      <div>
-        <h2>Knitting With Strangers</h2>
-        <p style="text-align: center; padding: 0; margin-top: -15px; font-style: italic;">Tea With Strangers clone</p>
-        <img img src="../public/yarn-ball.png"/>     
-        <p>
-          This is a web app that promotes and organizes meet ups for strangers who enjoy knitting. It allows
-          users to create events, and book a spot as guests.
-        </p>
-      </div>
-      <div>
-        <h2>SomeWays</h2>
-        <p style="text-align: center; padding: 0; margin-top: -15px; font-style: italic;">Maze game</p>
-        <img img src="../public/labyrinth.png" />
-        <p>
-          JavaScript app where the user, using the arrow keys, has to move a ball to the exit point (top-right corner) within 60 seconds,
-          passing for a green square.
-        </p>
-      </div>
-      <div>project3</div>
-      <div>Gallery</div>
-    </div>
-  </div>
+
   <div id="content">
-    <ol id="timeLine">
-      <li id="2012"><label>2012</label>&#9679</li>
-      <li id="2013"><label>2013</label>&#9679</li>
-      <li id="2014"><label>2014</label>&#9679</li>
-      <li id="2015"><label>2015</label>&#9679</li>
-      <li id="2016"><label>2016</label>&#9679</li>
-      <li id="2017"><label>2017</label>&#9679</li>
-      <li id="2018"><label>2018</label>&#9679</li>
-    </ol>
-    <div id="timeline-content">
-      <div id="tl-default"></div>
-      <div class="hidden" id="tl-2012">2012</div>
-      <div class="hidden" id="tl-2013">2013</div>
-      <div class="hidden" id="tl-2014">2014</div>
-      <div class="hidden" id="tl-2015">2015</div>
-      <div class="hidden" id="tl-2016">2016</div>
-      <div class="hidden" id="tl-2017">2017</div>
-      <div class="hidden" id="tl-2018">2018</div>
+    
+    <div id="myInfo">  
+      <div id="description">
+        <img src="../public/nataly.jpg">
+        <div>
+          <h1>Nataly Menares</h1> <p>Growth Engineer</p>
+          <br />
+          <p>My background is Industrial Engineering, I have worked as a Data Engineer, Data
+            Analyst, Project Manager, and Marketing Engineer.
+          <br/>
+            Also, I have coded in JavaScript, CSS, HTML, React-Redux.js, and Ruby.
+          </p>
+          <br/>
+          <p>
+            Check out my Projects →
+          </p>      
+        </div>
+      </div>
+      <span style="font-family: 'Megrim', cursive;">&nbsp;</span>
+      <canvas id="canvas" width="800" height="500"></canvas>
+      <div style="display:none;">
+        <img id="img" src="../public/create.jpg">
+      </div>
+    </div>
+    
+    <div id="projects-section">
+      <div class="project">
+        <img src="../public/yarn-ball.png" />
+        <div>
+          <h2>Knitting With Strangers</h2>
+          <p>Tea With Strangers clone</p>       
+          <p>
+            This is a web app that promotes and organizes meet ups for strangers who enjoy knitting. It allows
+            users to create events, and book a spot as guests.
+          </p>
+        </div>       
+      </div>
+      <div class="project">
+        <img src="../public/labyrinth.png" />
+        <div>
+          <h2>SomeWays</h2>
+          <p>Maze game</p>       
+          <p>
+            JavaScript app where the user, using the arrow keys, has to move a ball to the exit point (top-right corner)
+            within 60 seconds,
+            passing for a green square.
+          </p>
+        </div>     
+      </div>
+      <div class="project">project3</div>
+      <div class="project">Gallery</div>
     </div>
   </div>
-  <div id="footer" style="background-color: #16FFBD; display: flex; flex-direction: row; justify-content: space-around;">
-    <div>email</div>
-    <div>phone</div>
-  </div>
+<div id="skills">
+  <div>Tableau</div>
+  <div>Google Analytics</div>
+  <div>Adwords</div>
+  <div>SEO</div>
+  <div>SEM</div> 
+  <div>JavaScript</div>
+  <div>React-Redux.js</div>
+  <div>CSS</div>
+  <div>HTML</div>
+  <div>Ruby</div>
+  <div>Ruby on Rails</div>
+  <div>SQL</div>
+  <div>Spanish</div>
+</div>
+<ol id="timeLine">
+  <li id="2012"><label>2012</label>&#9679</li>
+  <li id="2013"><label>2013</label>&#9679</li>
+  <li id="2014"><label>2014</label>&#9679</li>
+  <li id="2015"><label>2015</label>&#9679</li>
+  <li id="2016"><label>2016</label>&#9679</li>
+  <li id="2017"><label>2017</label>&#9679</li>
+  <li id="2018"><label>2018</label>&#9679</li>
+</ol>
+<div id="timeline-content">
+  <div id="tl-default"></div>
+  <div class="hidden" id="tl-2012">2012</div>
+  <div class="hidden" id="tl-2013">2013</div>
+  <div class="hidden" id="tl-2014">2014</div>
+  <div class="hidden" id="tl-2015">2015</div>
+  <div class="hidden" id="tl-2016">2016</div>
+  <div class="hidden" id="tl-2017">2017</div>
+  <div class="hidden" id="tl-2018">2018</div>
+</div>
+<div id="footer" style="background-color: #16FFBD; display: flex; flex-direction: row; justify-content: space-around;">
+  <div>email</div>
+  <div>phone</div>
+</div>
   <script src="app.js"></script>
 </body>
 </html>

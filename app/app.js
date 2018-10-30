@@ -8,15 +8,29 @@ function getAPI(e) {
     .then(data => default_content.appendChild(quote).innerHTML = `${data.contents.quotes[0].quote} - ${data.contents.quotes[0].author}`)
 };
 
-var canvas = document.getElementById("name2");
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-canvas.addEventListener("mousemove", makeTransparent);
+var imageObj = document.getElementById("img");
+// void ctx.drawImage(image, dx, dy);
+// void ctx.drawImage(image, dx, dy, dWidth, dHeight);
+// void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 
-ctx.fillStyle = "#FFFFFF";
-ctx.fillRect(0, 0, 500, 500);
-ctx.fillStyle = "blue";
-ctx.font = "48px serif";
-ctx.fillText("Nataly Menares", 250, 250);
+imageObj.onload = function() { 
+  ctx.drawImage(imageObj, 0, 0, 800, 600);
+  ctx.font = '105px Megrim';
+  setTimeout(write, 1);
+};
+
+function write(){
+  ctx.fillStyle = "white";
+  ctx.textBaseline = "top";
+  ctx.fillText("Create", 220, 40);
+  ctx.fillText("Implement", 160, 140);
+  ctx.fillText("Test", 270, 240);
+  ctx.fillText("Improve", 220, 340);
+}
+
+canvas.addEventListener("mousemove", makeTransparent);
 
 function makeTransparent(e){
   e.preventDefault();
@@ -26,27 +40,10 @@ function makeTransparent(e){
   ctx.globalCompositeOperation = "destination-out";
   ctx.fillStyle = "#0066FF";
   ctx.beginPath();
-  ctx.arc(pos_x - 150, pos_y + 100, 40, 0, 2 * Math.PI, true);
+  ctx.arc(pos_x - 20, pos_y - 100, 100, 0, 2 * Math.PI, true);
   ctx.fill(); 
 }
 
-const name = document.getElementById("name");
-const natalyModal = document.getElementById("natalyModal");
-const span = document.getElementById("close");
-
-name.addEventListener("click", openModal);
-window.addEventListener("click", closeModal2);
-
-function openModal(e) {
-  e.preventDefault();
-  natalyModal.style.display = "block";
-};
-
-function closeModal2(e) {
-  if(e.target === natalyModal || e.target === span){
-    natalyModal.style.display = "none";
-  }
-};
 
 // timeline
 const timeline = document.getElementById("timeLine");

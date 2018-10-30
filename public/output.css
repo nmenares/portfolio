@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Megrim");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,7 +19,7 @@ time, mark, audio, video {
   font-family: "Montserrat", sans-serif;
   vertical-align: baseline;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -29,6 +30,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #252839;
 }
 
 ol, ul {
@@ -59,20 +64,18 @@ button:focus, input:focus {
 }
 
 #navBar {
-  width: auto;
+  width: 100%;
   height: 80px;
-  padding: 0 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: none;
   font-weight: 600;
-  background-color: blue;
 }
-#navBar #name2 {
-  height: 500px;
-  width: 500px;
+#navBar img {
+  width: 30px;
+  padding: 10px;
+  margin-left: 50px;
 }
 #navBar #contactInfo {
   display: flex;
@@ -80,188 +83,88 @@ button:focus, input:focus {
   align-items: center;
   width: 20%;
   justify-content: flex-end;
+  margin-right: 50px;
 }
-#navBar #contactInfo div {
-  margin: 6% 5%;
+#navBar #contactInfo img {
+  margin: 0;
 }
 
-#natalyModal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
+@font-face {
+  font-family: "'Megrim', cursive;";
+  src: url("https://fonts.googleapis.com/css?family=Megrim");
 }
-#natalyModal #nataly {
-  width: 50%;
-  margin: 5% auto;
-  font-weight: normal;
-  line-height: 2em;
+#content {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 500px;
+}
+#content #myInfo {
+  margin: 40px;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-end;
 }
-#natalyModal #close {
-  font-size: 3em;
+#content #myInfo #description {
+  display: flex;
+  flex-direction: row;
 }
-#natalyModal #close:hover {
-  font-size: 3.5em;
-  color: black;
+#content #myInfo #description img {
+  width: 200px;
+  height: 220px;
+  padding-right: 20px;
+  border-right: 2px solid white;
 }
-#natalyModal div {
+#content #myInfo #description div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+#content #myInfo #description div h1 {
+  font-size: 100%;
+  padding-bottom: 10px;
+}
+#content #myInfo #description div p {
+  line-height: 200%;
+  font-size: 80%;
+}
+#content #myInfo #canvas {
+  height: 100%;
+  width: 100%;
+  margin-top: -50%;
+}
+#content #projects-section {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 40px;
+}
+#content #projects-section .project {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: auto;
+  margin: 15px;
+}
+#content #projects-section .project img {
+  height: 100px;
+  margin-right: 10px;
+}
+#content #projects-section .project div {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
 }
-#natalyModal div img {
-  width: 25%;
-  height: 25%;
-}
-#natalyModal div p {
-  border-left: 5px solid black;
-  margin: 0% 5%;
-  padding-left: 5%;
+#content #projects-section .project div h1 {
   font-size: 100%;
-  line-height: 200%;
+  padding-bottom: 5px;
 }
-#natalyModal div p a {
-  color: black;
-}
-#natalyModal div p a:hover {
-  text-decoration: underline;
-}
-
-#content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-#content #timeLine {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  width: 100%;
-  margin: 0px auto;
-  height: 2px;
-  background-color: black;
-  list-style: none;
-}
-#content #timeLine li {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  color: white;
-  font-weight: bolder;
-  font-size: 2em;
-  margin-bottom: -13px;
-}
-#content #timeLine li label {
-  font-size: 0.4em;
-  color: white;
-}
-#content #timeLine .selected {
-  color: black;
-}
-#content #timeLine li:hover {
-  color: black;
-}
-#content #timeline-content {
-  display: flex;
-  margin: auto;
-  height: 200px;
-  align-content: center;
-}
-#content #timeline-content div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#content #timeline-content div h1 {
-  text-align: center;
-  font-size: 2em;
-  line-height: 2em;
-}
-#content #timeline-content div p {
-  width: 100%;
-  text-align: center;
-  font-size: 1.1em;
-  line-height: 1.5em;
-  font-style: italic;
-}
-#content #timeline-content .hidden {
-  display: none;
-  width: 50%;
-}
-
-#skills {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-#skills div {
-  color: black;
-  padding: 1%;
-  text-align: center;
-  font-size: 100%;
-  font-weight: 400;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-}
-
-#projects-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#projects-section h1 {
-  font-family: "Bad Script", cursive;
-  font-size: 200%;
-  padding: 40px;
-  padding-bottom: 10px;
-  text-decoration: underline;
-  font-weight: 100;
-}
-#projects-section #projects {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-around;
-  width: 90%;
-}
-#projects-section #projects div {
-  height: 300px;
-  width: 250px;
+#content #projects-section .project div p {
   line-height: 150%;
-  font-weight: 200;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-#projects-section #projects div h2 {
-  font-size: 100%;
-}
-#projects-section #projects div img {
-  width: 80px;
-}
-#projects-section #projects div p {
   font-size: 80%;
-  padding: 5px 10px;
 }
 
 /*# sourceMappingURL=output.css.map */
