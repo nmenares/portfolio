@@ -1,0 +1,17 @@
+#skills {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 100px;
+  
+  div {
+    padding: 1%;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 400;
+    border-top: 0.5px solid #ffffff;
+    border-bottom: 0.5px solid #ffffff;
+
+  }
+}

@@ -27,8 +27,9 @@
     <div id="myInfo">  
       <div id="description">
         <img src="../public/nataly.jpg">
-        <div>
-          <h1>Nataly Menares</h1> <p>Growth Engineer</p>
+        <div id="text">
+          <h1>Nataly Menares</h1> 
+          <p>Growth Engineer</p>
           <br />
           <p>My background is Industrial Engineering, I have worked as a Data Engineer, Data
             Analyst, Project Manager, and Marketing Engineer.
@@ -37,7 +38,7 @@
           </p>
           <br/>
           <p>
-            Check out my Projects →
+            Check out my projects →
           </p>      
         </div>
       </div>
@@ -52,45 +53,70 @@
       <div class="project">
         <img src="../public/yarn-ball.png" />
         <div>
-          <h2>Knitting With Strangers</h2>
-          <p>Tea With Strangers clone</p>       
-          <p>
-            This is a web app that promotes and organizes meet ups for strangers who enjoy knitting. It allows
-            users to create events, and book a spot as guests.
-          </p>
+          <a href="https://knittingwithstrangers.herokuapp.com/#/" target="_blank">
+            <h2>Knitting With Strangers</h2>
+            <p>Tea With Strangers clone</p>
+            <p>
+              This is a web app that promotes and organizes meet ups for strangers who enjoy knitting. It allows
+              users to create events, and book a spot as guests.
+            </p>
+          </a>   
         </div>       
       </div>
       <div class="project">
         <img src="../public/labyrinth.png" />
         <div>
-          <h2>SomeWays</h2>
-          <p>Maze game</p>       
-          <p>
-            JavaScript app where the user, using the arrow keys, has to move a ball to the exit point (top-right corner)
-            within 60 seconds,
-            passing for a green square.
-          </p>
+          <a href="https://nmenares.github.io/js_someways/" target="_blank">
+            <h2>SomeWays</h2>
+            <p>Maze game</p>       
+            <p>
+              JavaScript app where the user, using the arrow keys, has to move a ball to the exit point (top-right corner)
+              within 60 seconds,
+              passing for a green square.
+            </p>
+          </a>
         </div>     
       </div>
-      <div class="project">project3</div>
-      <div class="project">Gallery</div>
+      <div class="project">
+        <img src="../public/service.png" />
+        <div>
+          <a href="https://let-us-eat.herokuapp.com/#/" target="_blank">
+            <h2>Let's Eat</h2>
+            <p>Restaurant Selector</p>
+            <p>
+              Website that randomly chooses a restaurant for the user, after setting preferences.
+              It shows restaurant details and allows users to save liked restaurants.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="project">
+        <img src="../public/color-palette.png" />
+        <div>
+          <h2>My Gallery</h2>
+          <p>Handmade and unique creations</p>
+          <p>
+            I am engineer and amateur artist. This is my gallery, where you can find unique pieces of paintings, jewels and others.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-<div id="skills">
-  <div>Tableau</div>
-  <div>Google Analytics</div>
-  <div>Adwords</div>
-  <div>SEO</div>
-  <div>SEM</div> 
-  <div>JavaScript</div>
-  <div>React-Redux.js</div>
-  <div>CSS</div>
-  <div>HTML</div>
-  <div>Ruby</div>
-  <div>Ruby on Rails</div>
-  <div>SQL</div>
-  <div>Spanish</div>
-</div>
+  <div id="skills">
+    <div>Tableau</div>
+    <div>Google Analytics</div>
+    <div>Adwords</div>
+    <div>SEO</div>
+    <div>SEM</div> 
+    <div>JavaScript</div>
+    <div>React-Redux.js</div>
+    <div>CSS</div>
+    <div>HTML</div>
+    <div>Ruby</div>
+    <div>Ruby on Rails</div>
+    <div>SQL</div>
+    <div>Spanish</div>
+  </div>
 <ol id="timeLine">
   <li id="2012"><label>2012</label>&#9679</li>
   <li id="2013"><label>2013</label>&#9679</li>
@@ -102,17 +128,38 @@
 </ol>
 <div id="timeline-content">
   <div id="tl-default"></div>
-  <div class="hidden" id="tl-2012">2012</div>
-  <div class="hidden" id="tl-2013">2013</div>
+  <div class="hidden" id="tl-2012">
+    <img src="../public/graduation.png">
+    <ul>
+      <li>Graduated from Industrial Engineering Universidad de Chile with major in Marketing Quantitative</li>
+      <li>Hired as Data Engineer at Kr Consulting</li>
+    </ul>   
+  </div>
+  <div class="hidden" id="tl-2013">
+    <img src="../public/presentation.png">
+    <ul>
+      <li>Hired as Data Analyst at Telefonica Chile</li>
+    </ul>
+  </div>
   <div class="hidden" id="tl-2014">2014</div>
   <div class="hidden" id="tl-2015">2015</div>
   <div class="hidden" id="tl-2016">2016</div>
   <div class="hidden" id="tl-2017">2017</div>
   <div class="hidden" id="tl-2018">2018</div>
 </div>
-<div id="footer" style="background-color: #16FFBD; display: flex; flex-direction: row; justify-content: space-around;">
-  <div>email</div>
-  <div>phone</div>
+<div id="footer">
+  <div id="footer1">
+    <div>
+      <img src="../public/email.png">
+      <a href="mailto:nataly.menares@gmail.com"> nataly.menares@gmail.com</a>
+    </div>
+    <div>
+      <img src="../public/smartphone.png">
+      <div>(650) 250-6864</div>
+    </div>   
+  </div>
+  <div id="footer2">Nataly Menares - 2018</div>
+    
 </div>
   <script src="app.js"></script>
 </body>

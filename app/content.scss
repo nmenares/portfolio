@@ -2,13 +2,15 @@
   width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-
+  justify-content: space-between;
   height: 500px;
+  margin-bottom: 80px;
+  margin-top: 30px;
 
   #myInfo{
     margin: 40px;
-    width: 60%;
+    margin-top: 70px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,10 +23,11 @@
       img {
         width: 200px;
         height: 220px;
-        border-right: 2px solid white;
+        padding-right: 20px;
+        border-right: 2px solid #b5b5b7;    
       }
 
-      div {
+      #text {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -44,7 +47,7 @@
     #canvas{
       height: 100%;
       width: 100%;
-      margin-top: -50%;
+      margin-top: -80%;
     }
   }
 
@@ -61,7 +64,8 @@
       margin: 15px;
 
       img {
-        width: 30%;
+        width: 100px;
+        height: auto;
         margin-right: 10px;
       }
 
@@ -69,13 +73,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 90%;
+        margin: 0 20px;
 
         h1 {
+          width: 100%;
           font-size: 100%;
           padding-bottom: 5px;
         }
 
         p{ 
+          width: 100%;
           line-height: 150%;
           font-size: 80%;
         }        
