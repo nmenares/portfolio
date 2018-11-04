@@ -58,13 +58,13 @@ function openYear(e){
 };
 
 document.addEventListener("DOMContentLoaded", getAPI);
-let default_content = document.getElementById("tl-default");
+let default_content = document.getElementById("quote");
 let quote = document.createElement("p");
 
 function getAPI(e) {
   fetch("https://quotes.rest/qod")
     .then(response => response.json())
-    .then(data => default_content.appendChild(quote).innerHTML = `${data.contents.quotes[0].quote} - ${data.contents.quotes[0].author}`)
+    .then(data => default_content.appendChild(quote).innerHTML = `"${data.contents.quotes[0].quote}" - ${data.contents.quotes[0].author}`)
 };
 
 
