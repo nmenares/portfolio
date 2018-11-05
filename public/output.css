@@ -293,6 +293,9 @@ button:focus, input:focus {
   height: 20px;
   padding: 5px;
 }
+#footer #footer1 div div {
+  padding: 0px;
+}
 #footer #footer2 {
   color: #b5b5b7;
   text-align: center;
