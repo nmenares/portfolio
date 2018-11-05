@@ -9,7 +9,7 @@ var imageObj = document.getElementById("img");
 imageObj.onload = function() { 
   ctx.drawImage(imageObj, 0, 0, 800, 500);
   ctx.font = '105px Megrim';
-  setTimeout(write, 0);
+  setTimeout(write, 1);
 };
 
 function write(){

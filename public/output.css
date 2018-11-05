@@ -186,6 +186,14 @@ button:focus, input:focus {
   border-bottom: 0.5px solid #ffffff;
 }
 
+@keyframes appear {
+  from {
+    height: 100px;
+  }
+  to {
+    height: 200px;
+  }
+}
 #timeLine {
   display: flex;
   flex-direction: row;
@@ -196,6 +204,7 @@ button:focus, input:focus {
   height: 2px;
   background-color: #b5b5b7;
   list-style: none;
+  margin-bottom: 100px;
 }
 #timeLine li {
   width: 25%;
@@ -222,7 +231,6 @@ button:focus, input:focus {
 #timeline-content {
   display: flex;
   margin: auto;
-  height: 400px;
   align-content: center;
 }
 #timeline-content div {
@@ -230,6 +238,10 @@ button:focus, input:focus {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 60px;
+  animation-name: appear;
+  animation-duration: 2s;
+  height: 200px;
 }
 #timeline-content div img {
   width: 150px;
@@ -247,12 +259,13 @@ button:focus, input:focus {
 }
 
 #quote {
+  background-image: linear-gradient(90deg, #7984EB, #FF9F00);
   height: 100px;
   width: 60%;
   font-size: 100%;
   line-height: 200%;
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 #footer {
