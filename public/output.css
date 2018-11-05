@@ -100,16 +100,20 @@ button:focus, input:focus {
   margin-top: 130px;
 }
 #content #myInfo {
-  margin: 40px;
-  margin-top: 70px;
+  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
 }
 #content #myInfo #description {
   display: flex;
   flex-direction: row;
+  position: relative;
+  width: 80%;
+  justify-content: center;
 }
 #content #myInfo #description img {
   width: 200px;
@@ -131,9 +135,8 @@ button:focus, input:focus {
   font-size: 90%;
 }
 #content #myInfo #canvas {
-  height: 100%;
-  width: 100%;
-  margin-top: -80%;
+  align-self: center;
+  position: absolute;
 }
 #content #projects-section {
   display: flex;
@@ -178,6 +181,7 @@ button:focus, input:focus {
   margin-bottom: 100px;
 }
 #skills div {
+  display: inline-block;
   padding: 1%;
   text-align: center;
   font-size: 100%;
@@ -186,14 +190,6 @@ button:focus, input:focus {
   border-bottom: 0.5px solid #ffffff;
 }
 
-@keyframes appear {
-  from {
-    height: 100px;
-  }
-  to {
-    height: 200px;
-  }
-}
 #timeLine {
   display: flex;
   flex-direction: row;
@@ -230,8 +226,10 @@ button:focus, input:focus {
 
 #timeline-content {
   display: flex;
+  justify-content: center;
   margin: auto;
-  align-content: center;
+  width: 80%;
+  align-items: center;
 }
 #timeline-content div {
   display: flex;
@@ -239,23 +237,23 @@ button:focus, input:focus {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 60px;
-  animation-name: appear;
-  animation-duration: 2s;
-  height: 200px;
 }
 #timeline-content div img {
-  width: 150px;
-  padding: 30px;
+  width: 100px;
+  padding-right: 30px;
 }
 #timeline-content div ul {
-  width: 80%;
+  width: 100%;
   text-align: center;
   font-size: 100%;
   line-height: 150%;
 }
+#timeline-content div ul li {
+  text-align: left;
+}
 #timeline-content .hidden {
   display: none;
-  width: 50%;
+  height: 0px;
 }
 
 #quote {
@@ -275,6 +273,8 @@ button:focus, input:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: absolute;
+  bottom: 0;
 }
 #footer #footer1 {
   height: 6px;
