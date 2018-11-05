@@ -204,7 +204,7 @@ button:focus, input:focus {
   height: 2px;
   background-color: #b5b5b7;
   list-style: none;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 #timeLine li {
   width: 25%;
@@ -259,13 +259,15 @@ button:focus, input:focus {
 }
 
 #quote {
-  background-image: linear-gradient(90deg, #7984EB, #FF9F00);
-  height: 100px;
+  background-image: radial-gradient(#7984EB -100%, #252839 50%);
   width: 60%;
   font-size: 100%;
   line-height: 200%;
   text-align: center;
   margin-bottom: 50px;
+}
+#quote p {
+  padding: 10px;
 }
 
 #footer {
@@ -294,7 +296,7 @@ button:focus, input:focus {
   padding: 5px;
 }
 #footer #footer1 div div {
-  padding: 0px;
+  margin: 0px;
 }
 #footer #footer2 {
   color: #b5b5b7;

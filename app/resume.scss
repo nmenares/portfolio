@@ -14,7 +14,7 @@
     height: 2px;
     background-color: #b5b5b7;
     list-style: none;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 
     li {
       width: 25%;
@@ -78,12 +78,16 @@
   }
 
 #quote {
-  background-image: radial-gradient(circle closest-side #7984EB, #252839);
+  background-image: radial-gradient(#7984EB -100%, #252839 50%);
   width: 60%;
   font-size: 100%;
   line-height: 200%;
   text-align: center;
   margin-bottom: 50px;
+
+  p {
+    padding: 10px;
+  }
 }
 
 
