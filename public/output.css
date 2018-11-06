@@ -72,7 +72,7 @@ button:focus, input:focus {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  z-index: 1;
+  z-index: 10;
 }
 #navBar img {
   width: 30px;
@@ -171,6 +171,7 @@ button:focus, input:focus {
 #content #projects-section .project {
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: auto;
   max-width: 500px;
   padding-bottom: 20px;
@@ -252,7 +253,9 @@ button:focus, input:focus {
     width: 100%;
   }
   #content #projects-section .project {
-    min-height: 150px;
+    min-height: 200px;
+    flex-direction: column;
+    margin-bottom: 30px;
   }
   #content #projects-section .project img {
     width: 80px;
@@ -263,9 +266,10 @@ button:focus, input:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     width: 80%;
     height: auto;
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 }
 ::-webkit-scrollbar {
@@ -301,7 +305,7 @@ button:focus, input:focus {
   display: inline-block;
   padding: 10px 30px;
   text-align: center;
-  font-size: 100%;
+  font-size: 90%;
   font-weight: 400;
 }
 
