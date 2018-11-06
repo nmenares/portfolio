@@ -151,6 +151,7 @@ button:focus, input:focus {
 #content #myInfo #description #text p {
   line-height: 150%;
   font-size: 80%;
+  text-align: left;
 }
 #content #myInfo #canvas {
   width: 49%;
