@@ -4,13 +4,6 @@ window.onbeforeunload = function() {
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-// var imageObj = document.getElementById("img");
-
-// imageObj.onload = function() { 
-//   ctx.drawImage(imageObj, 0, 0, 800, 500);
-//   ctx.font = '105px Megrim';
-//   setTimeout(write, 1);
-// };
 
 ctx.beginPath();
 ctx.fillStyle = "#252839";
