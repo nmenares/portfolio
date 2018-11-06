@@ -90,6 +90,26 @@ button:focus, input:focus {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252839;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7984EB;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #383c50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4c56a9;
+}
+
 #content {
   width: 90%;
   display: flex;
@@ -181,26 +201,49 @@ button:focus, input:focus {
   font-size: 80%;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+@media all and (max-width: 940px) {
+  content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  content #myInfo {
+    width: 100%;
+    max-width: 800px;
+  }
+  content #myInfo #description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    justify-content: center;
+  }
+  content #myInfo #description img {
+    width: 200px;
+    height: 220px;
+    padding-right: 0%;
+    padding-bottom: 5%;
+    border: none;
+  }
+  content #myInfo #description #text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+  }
+  content #myInfo #description #text h1 {
+    font-size: 100%;
+  }
+  content #myInfo #description #text p {
+    line-height: 150%;
+    font-size: 80%;
+  }
+  content #myInfo #canvas {
+    display: none;
+  }
 }
-
-::-webkit-scrollbar-track {
-  background: #252839;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #7984EB;
-}
-
-::-webkit-scrollbar-track:hover {
-  background: #383c50;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #4c56a9;
-}
-
 #skills {
   width: 100%;
   display: flex;
@@ -210,7 +253,7 @@ button:focus, input:focus {
 }
 #skills div {
   display: inline-block;
-  padding: 1%;
+  padding: 10px 30px;
   text-align: center;
   font-size: 100%;
   font-weight: 400;
@@ -218,6 +261,19 @@ button:focus, input:focus {
   border-bottom: 0.5px solid #ffffff;
 }
 
+@media all and (max-width: 980px) {
+  #skills {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #skills div {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 5px 15px;
+  }
+}
 #timeLine {
   display: flex;
   flex-direction: row;
@@ -327,6 +383,14 @@ button:focus, input:focus {
   text-align: center;
   margin: 5px;
   font-size: 70%;
+}
+
+@media all and (max-width: 940px) {
+  #footer #footer1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
