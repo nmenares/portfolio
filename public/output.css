@@ -411,7 +411,7 @@ button:focus, input:focus {
   #timeline-content div ul li {
     font-size: 80%;
     line-height: 120%;
-    text-align: justify;
+    text-align: center;
   }
 }
 #footer {
