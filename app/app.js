@@ -31,7 +31,7 @@ function makeTransparent(e){
   ctx.globalCompositeOperation = "destination-out";
   ctx.fillStyle = "#0066FF";
   ctx.beginPath();
-  ctx.arc(pos_x - 20, pos_y - 100, 200, 0, 2 * Math.PI, true);
+  ctx.arc(pos_x - 200, pos_y - 200, 300, 0, 2 * Math.PI, true);
   ctx.fill(); 
 }
 
