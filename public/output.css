@@ -338,6 +338,7 @@ button:focus, input:focus {
 }
 #timeline-content div ul li {
   text-align: left;
+  padding-bottom: 10px;
 }
 #timeline-content .hidden {
   display: none;
