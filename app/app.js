@@ -14,19 +14,19 @@ var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.fillStyle = "#252839";
-ctx.rect(0, 0, 1000, 500);
+ctx.rect(0, 0, 800, 500);
 ctx.fill();
-ctx.font = "105px Megrim";
+ctx.font = "100px Megrim";
 
 setTimeout(write, 1);
 
 function write(){
   ctx.fillStyle = "white";
   ctx.textBaseline = "top";
-  ctx.fillText("Think Out", 280, 40);
-  ctx.fillText("Develop", 300, 140);
-  ctx.fillText("Test", 390, 240);
-  ctx.fillText("Optimice", 300, 340);
+  ctx.fillText("Think Out", 180, 40);
+  ctx.fillText("Develop", 200, 140);
+  ctx.fillText("Test", 290, 240);
+  ctx.fillText("Optimice", 200, 340);
 }
 
 canvas.addEventListener("mousemove", makeTransparent);

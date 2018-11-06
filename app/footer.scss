@@ -1,13 +1,9 @@
 #footer {
     height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 0;
+    display: inline-block;
+    bottom: 0px;
 
   #footer1 {
-    height: 6px;
     display: flex;
     flex-direction: row;
     justify-content: center;

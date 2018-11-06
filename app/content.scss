@@ -2,7 +2,7 @@
   width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 500px;
   margin-bottom: 80px;
   margin-top: 130px;
@@ -26,7 +26,7 @@
       img {
         width: 200px;
         height: 220px;
-        padding-right: 20px;
+        padding-right: 5%;
         border-right: 2px solid #b5b5b7;    
       }
 
@@ -34,21 +34,23 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-left: 20px;
+        margin-left: 5%;
 
         h1 {
           font-size: 100%;
         }
 
         p{ 
-          line-height: 150%;
+          line-height: 200%;
           font-size: 90%;
         }        
       }
     }
 
     #canvas{
-      align-self: center;
+      width: 50%;
+      height: 500px;
+      align-self: flex-end;
       position: absolute;
     }
   }
@@ -56,19 +58,19 @@
   #projects-section{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     
     .project {
       display: flex;
       flex-direction: row;
-      width: 100%;
+      max-width: 900px;
       height: auto;
-      margin: 15px;
+      margin: 2%;
 
       img {
         width: 100px;
         height: auto;
-        margin-right: 10px;
+        margin-right: 2.5%;
       }
 
       div {
@@ -79,15 +81,15 @@
         margin: 0 20px;
 
         h1 {
-          width: 100%;
+          max-width: 600px;
           font-size: 100%;
           padding-bottom: 5px;
         }
 
         p{ 
           width: 100%;
-          line-height: 150%;
-          font-size: 80%;
+          line-height: 200%;
+          font-size: 90%;
         }        
       }
     }
