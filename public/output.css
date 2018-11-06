@@ -148,6 +148,12 @@ button:focus, input:focus {
 #content #myInfo #description #text h1 {
   font-size: 100%;
 }
+#content #myInfo #description #text #description {
+  padding: 0px;
+  padding-bottom: 10px;
+  display: block;
+  text-align: left;
+}
 #content #myInfo #description #text p {
   line-height: 150%;
   font-size: 80%;
