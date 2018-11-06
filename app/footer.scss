@@ -13,7 +13,7 @@
       margin: 10px;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
   
       img {
@@ -38,10 +38,19 @@
 }
 
 @media all and (max-width: 940px){
-  #footer #footer1 {
+  #footer {
+    height: auto;
+
+    #footer1 {
       display: flex;
       flex-direction: column;
-      justify-content: center;    
+      justify-content: space-around;   
+      
+      div {
+        margin: 2px;
+      }
+    }
   }
+  
 }
 

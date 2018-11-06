@@ -90,26 +90,6 @@ button:focus, input:focus {
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #252839;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #7984EB;
-}
-
-::-webkit-scrollbar-track:hover {
-  background: #383c50;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #4c56a9;
-}
-
 #content {
   width: 90%;
   display: flex;
@@ -202,54 +182,80 @@ button:focus, input:focus {
 }
 
 @media all and (max-width: 940px) {
-  content {
-    display: flex;
+  #content {
+    height: 1000px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
-  content #myInfo {
+  #content #myInfo {
     width: 100%;
     max-width: 800px;
+    height: auto;
   }
-  content #myInfo #description {
+  #content #myInfo #description {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80%;
     justify-content: center;
+    margin-bottom: 50px;
   }
-  content #myInfo #description img {
+  #content #myInfo #description img {
     width: 200px;
     height: 220px;
-    padding-right: 0%;
-    padding-bottom: 5%;
-    border: none;
+    padding: 2px;
+    border: 1px solid #ffffff;
   }
-  content #myInfo #description #text {
+  #content #myInfo #description #text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 5%;
   }
-  content #myInfo #description #text h1 {
+  #content #myInfo #description #text h1 {
     font-size: 100%;
   }
-  content #myInfo #description #text p {
+  #content #myInfo #description #text p {
     line-height: 150%;
     font-size: 80%;
   }
-  content #myInfo #canvas {
+  #content #myInfo #canvas {
     display: none;
   }
+  #content #projects-section {
+    width: 100%;
+  }
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252839;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7984EB;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #383c50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4c56a9;
+}
+
 #skills {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 100px;
+  border-top: 0.5px solid #ffffff;
+  border-bottom: 0.5px solid #ffffff;
 }
 #skills div {
   display: inline-block;
@@ -257,8 +263,6 @@ button:focus, input:focus {
   text-align: center;
   font-size: 100%;
   font-weight: 400;
-  border-top: 0.5px solid #ffffff;
-  border-bottom: 0.5px solid #ffffff;
 }
 
 @media all and (max-width: 980px) {
@@ -271,7 +275,7 @@ button:focus, input:focus {
   #skills div {
     display: inline-block;
     white-space: nowrap;
-    padding: 5px 15px;
+    padding: 10px 15px;
   }
 }
 #timeLine {
@@ -367,7 +371,7 @@ button:focus, input:focus {
   margin: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 #footer #footer1 div img {
@@ -386,10 +390,16 @@ button:focus, input:focus {
 }
 
 @media all and (max-width: 940px) {
+  #footer {
+    height: auto;
+  }
   #footer #footer1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+  }
+  #footer #footer1 div {
+    margin: 2px;
   }
 }
 
