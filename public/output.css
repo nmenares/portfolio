@@ -131,7 +131,7 @@ button:focus, input:focus {
   font-size: 100%;
 }
 #content #myInfo #description #text p {
-  line-height: 200%;
+  line-height: 150%;
   font-size: 80%;
 }
 #content #myInfo #canvas {
@@ -171,7 +171,7 @@ button:focus, input:focus {
 }
 #content #projects-section .project div p {
   width: 100%;
-  line-height: 200%;
+  line-height: 150%;
   font-size: 80%;
 }
 
