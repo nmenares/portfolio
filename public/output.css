@@ -398,6 +398,8 @@ button:focus, input:focus {
 @media all and (max-width: 940px) {
   #timeline-content {
     margin: 10px;
+    margin-top: -40px;
+    height: 250px;
   }
   #timeline-content div {
     flex-direction: column;
