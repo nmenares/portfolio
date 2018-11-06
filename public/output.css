@@ -406,10 +406,10 @@ button:focus, input:focus {
   #timeline-content {
     margin: 10px;
     margin-top: -40px;
-    height: 250px;
   }
   #timeline-content div {
     flex-direction: column;
+    height: 250px;
   }
   #timeline-content div img {
     margin: 10px;
