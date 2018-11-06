@@ -295,7 +295,7 @@ button:focus, input:focus {
 #skills {
   width: 80%;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 100px;
   border-top: 0.5px solid #ffffff;
@@ -303,6 +303,7 @@ button:focus, input:focus {
 }
 #skills div {
   display: inline-block;
+  white-space: nowrap;
   padding: 10px 30px;
   text-align: center;
   font-size: 90%;
@@ -311,13 +312,6 @@ button:focus, input:focus {
 
 @media all and (max-width: 980px) {
   #skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  #skills div {
-    display: inline-block;
-    white-space: nowrap;
     padding: 10px 15px;
   }
 }
