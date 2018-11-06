@@ -90,6 +90,11 @@ button:focus, input:focus {
   margin: 0;
 }
 
+@media all and (max-width: 940px) {
+  #navbar {
+    justify-content: center;
+  }
+}
 #content {
   width: 90%;
   display: flex;
@@ -156,7 +161,7 @@ button:focus, input:focus {
   flex-direction: row;
   height: auto;
   max-width: 500px;
-  margin-bottom: 150px;
+  padding-bottom: 20px;
 }
 #content #projects-section .project img {
   width: 100px;
@@ -183,40 +188,46 @@ button:focus, input:focus {
 
 @media all and (max-width: 940px) {
   #content {
-    height: 1000px;
+    max-height: 1000px;
+    min-height: 800px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
   }
   #content #myInfo {
     width: 100%;
     max-width: 800px;
-    height: auto;
   }
   #content #myInfo #description {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   #content #myInfo #description img {
     width: 200px;
     height: 220px;
     padding: 2px;
     border: 1px solid #ffffff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   #content #myInfo #description #text {
+    min-height: 220px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 5%;
+    justify-content: flex-start;
+    margin-bottom: 30px;
   }
   #content #myInfo #description #text h1 {
     font-size: 100%;
+    text-align: center;
+  }
+  #content #myInfo #description #text #description {
+    display: block;
+    text-align: center;
   }
   #content #myInfo #description #text p {
     line-height: 150%;
@@ -229,11 +240,7 @@ button:focus, input:focus {
     width: 100%;
   }
   #content #projects-section .project {
-    display: flex;
-    flex-direction: row;
     min-height: 150px;
-    max-width: 500px;
-    margin-bottom: 20px;
   }
   #content #projects-section .project img {
     width: 80px;
@@ -378,6 +385,23 @@ button:focus, input:focus {
   padding: 10px;
 }
 
+@media all and (max-width: 940px) {
+  #timeline-content {
+    margin: 10px;
+  }
+  #timeline-content div {
+    flex-direction: column;
+  }
+  #timeline-content div img {
+    margin: 10px;
+    padding: 0;
+  }
+  #timeline-content div ul li {
+    font-size: 80%;
+    line-height: 120%;
+    text-align: justify;
+  }
+}
 #footer {
   height: 70px;
   display: inline-block;
@@ -419,6 +443,7 @@ button:focus, input:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-bottom: 20px;
   }
   #footer #footer1 div {
     margin: 2px;

@@ -88,6 +88,27 @@
   }
 }
 
+@media all and (max-width: 940px){
+  #timeline-content {
+    margin: 10px;
+
+    div {
+      flex-direction: column;
+
+      img {
+        margin: 10px;
+        padding: 0;
+      }
+
+      ul li {
+        font-size: 80%;
+        line-height: 120%;
+        text-align: justify;
+      }
+    }
+  }
+}
+
 
 
 

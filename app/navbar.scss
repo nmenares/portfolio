@@ -28,3 +28,23 @@
     }
   }
 }
+
+@media all and (max-width: 940px) {
+  #navBar {
+  justify-content: center;
+  
+    img {
+      margin: 0px;
+    }
+    
+    #contactInfo {
+      width: auto;
+      justify-content: center;
+      margin: 0px;
+
+      img {
+        padding: 10px;
+      }
+    }
+  }
+}
