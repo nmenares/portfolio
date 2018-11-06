@@ -171,7 +171,7 @@ button:focus, input:focus {
   padding: 0 20px;
 }
 #content #projects-section .project div h1 {
-  max-width: 600px;
+  max-width: 500px;
   font-size: 100%;
   padding-bottom: 5px;
 }
@@ -207,6 +207,7 @@ button:focus, input:focus {
     height: 220px;
     padding: 2px;
     border: 1px solid #ffffff;
+    margin-bottom: 30px;
   }
   #content #myInfo #description #text {
     display: flex;
@@ -226,6 +227,26 @@ button:focus, input:focus {
   }
   #content #projects-section {
     width: 100%;
+  }
+  #content #projects-section .project {
+    display: flex;
+    flex-direction: row;
+    min-height: 150px;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  #content #projects-section .project img {
+    width: 80px;
+    height: auto;
+    margin-right: 2.5%;
+  }
+  #content #projects-section .project div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+    padding: 0 20px;
   }
 }
 ::-webkit-scrollbar {
