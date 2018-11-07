@@ -146,18 +146,24 @@ button:focus, input:focus {
   margin-left: 5%;
 }
 #content #myInfo #description #text h1 {
-  font-size: 100%;
+  font-size: 110%;
+  letter-spacing: 1px;
 }
-#content #myInfo #description #text #description {
+#content #myInfo #description #text h2 {
+  font-size: 70%;
   padding: 0px;
   padding-bottom: 10px;
+  padding-top: 5px;
   display: block;
   text-align: left;
+  letter-spacing: 1px;
 }
-#content #myInfo #description #text p {
+#content #myInfo #description #text h3 {
   line-height: 150%;
   font-size: 80%;
   text-align: left;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 #content #myInfo #canvas {
   width: 49%;
@@ -179,9 +185,10 @@ button:focus, input:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: auto;
+  min-height: 70px;
   max-width: 500px;
-  padding-bottom: 20px;
+  padding: 20px 0px;
+  margin: 20px 0px;
 }
 #content #projects-section .project img {
   width: 100px;
@@ -191,19 +198,25 @@ button:focus, input:focus {
 #content #projects-section .project div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 80%;
-  padding: 0 20px;
+  padding: 20px;
 }
 #content #projects-section .project div h1 {
-  max-width: 500px;
-  font-size: 100%;
+  font-size: 110%;
   padding-bottom: 5px;
+  letter-spacing: 1px;
 }
-#content #projects-section .project div p {
-  width: 100%;
+#content #projects-section .project div h2 {
+  font-size: 80%;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+#content #projects-section .project div h3 {
   line-height: 150%;
   font-size: 80%;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 @media all and (max-width: 940px) {
@@ -242,16 +255,11 @@ button:focus, input:focus {
     margin-bottom: 30px;
   }
   #content #myInfo #description #text h1 {
-    font-size: 100%;
     text-align: center;
   }
-  #content #myInfo #description #text #description {
+  #content #myInfo #description #text h2 {
     display: block;
     text-align: center;
-  }
-  #content #myInfo #description #text p {
-    line-height: 150%;
-    font-size: 80%;
   }
   #content #myInfo #canvas {
     display: none;
@@ -276,7 +284,7 @@ button:focus, input:focus {
     text-align: center;
     width: 80%;
     height: auto;
-    padding: 10px 20px;
+    padding: 20px;
   }
 }
 ::-webkit-scrollbar {

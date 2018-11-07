@@ -38,20 +38,26 @@
         margin-left: 5%;
 
         h1 {
-          font-size: 100%;
+          font-size: 110%;
+          letter-spacing: 1px;
         }
 
-        #description {
+        h2 {
+          font-size: 70%;
           padding: 0px;
           padding-bottom: 10px;
+          padding-top: 5px;
           display: block;
           text-align: left;
+          letter-spacing: 1px;
         }
 
-        p{ 
+        h3{ 
           line-height: 150%;
           font-size: 80%;
           text-align: left;
+          font-weight: 500;
+          letter-spacing: 1px;
         }        
       }
     }
@@ -79,9 +85,10 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      height: auto;
+      min-height: 70px;
       max-width: 500px;
-      padding-bottom: 20px;
+      padding: 20px 0px;
+      margin: 20px 0px;
 
       img {
         width: 100px;
@@ -92,20 +99,27 @@
       div {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         width: 80%;
-        padding: 0 20px;
+        padding: 20px;
 
         h1 {
-          max-width: 500px;
-          font-size: 100%;
+          font-size: 110%;
           padding-bottom: 5px;
+          letter-spacing: 1px;
         }
 
-        p{ 
-          width: 100%;
+        h2 {
+          font-size: 80%;
+          padding-bottom: 10px;
+          letter-spacing: 1px;
+        }
+
+        h3 { 
           line-height: 150%;
           font-size: 80%;
+          font-weight: 500;
+          letter-spacing: 1px;
         }        
       }
     }
@@ -151,19 +165,13 @@
           margin-bottom: 30px;
 
           h1 {
-            font-size: 100%;
             text-align: center;
           }
 
-          #description {
+          h2 {
             display: block;
             text-align: center;
-          }
-
-          p{ 
-            line-height: 150%;
-            font-size: 80%;
-          }        
+          }      
         }
       }
 
@@ -193,7 +201,7 @@
           text-align: center;
           width: 80%;
           height: auto;
-          padding: 10px 20px;
+          padding: 20px;
    
         }
       }
