@@ -133,8 +133,7 @@ button:focus, input:focus {
   justify-content: center;
 }
 #content #myInfo #description img {
-  width: 200px;
-  height: auto;
+  height: 200px;
   padding-right: 5%;
   border-right: 2px solid #b5b5b7;
 }
