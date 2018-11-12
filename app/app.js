@@ -6,7 +6,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.fillStyle = "#252839";
+ctx.fillStyle = "#ffffff";
 ctx.rect(0, 0, 800, 500);
 ctx.fill();
 ctx.font = "100px Megrim";
@@ -14,12 +14,12 @@ ctx.font = "100px Megrim";
 setTimeout(write, 1);
 
 function write(){
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "#252839";
   ctx.textBaseline = "top";
   ctx.fillText("Think Out", 180, 40);
   ctx.fillText("Develop", 200, 140);
   ctx.fillText("Test", 290, 240);
-  ctx.fillText("Optimice", 200, 340);
+  ctx.fillText("Optimize", 200, 340);
 }
 
 canvas.addEventListener("mousemove", makeTransparent);
