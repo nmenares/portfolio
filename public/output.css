@@ -82,7 +82,7 @@ button:focus, input:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100px;
+  width: 120px;
   justify-content: space-evenly;
   margin-right: 100px;
 }
