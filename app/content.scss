@@ -26,7 +26,7 @@
 
       img {
         width: 200px;
-        height: 220px;
+        height: auto;
         padding-right: 5%;
         border-right: 2px solid #b5b5b7;    
       }
@@ -149,12 +149,14 @@
 
         img {
           width: 100%;
+          border: none;
           height: auto;
           padding: 2px;
           margin-bottom: 20px;   
         }
 
         #text {
+          border: none;
           height: auto;
           display: flex;
           flex-direction: column;
