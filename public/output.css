@@ -333,7 +333,7 @@ button:focus, input:focus {
 }
 #timeLine li label {
   font-size: 0.4em;
-  color: white;
+  color: #252839;
 }
 #timeLine .selected {
   color: #FF9F00;
@@ -415,7 +415,7 @@ button:focus, input:focus {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 80%;
+  font-size: 100%;
 }
 #footer #footer1 div {
   margin: 10px;
@@ -433,9 +433,9 @@ button:focus, input:focus {
   margin: 0px;
 }
 #footer #footer2 {
-  color: #b5b5b7;
+  color: #252839;
   text-align: center;
-  margin: 5px;
+  margin: 10px;
   font-size: 70%;
 }
 
