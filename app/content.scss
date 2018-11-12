@@ -127,13 +127,14 @@
 @media all and (max-width: 940px) {
 
   #content {
-  max-height: 1000px;
-  min-height: 800px;
+  height: auto;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 30px;
 
     #myInfo{
+      height: auto;
       width: 100%;
       max-width: 800px;
 
@@ -147,15 +148,14 @@
         margin-bottom: 30px;
 
         img {
-          width: 200px;
-          height: 220px;
+          width: 100%;
+          height: auto;
           padding: 2px;
-          border: 1px solid #ffffff; 
           margin-bottom: 20px;   
         }
 
         #text {
-          min-height: 220px;
+          height: auto;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -179,10 +179,12 @@
 
     #projects-section {
       width: 100%;
+      height: auto;
 
-      .project {
-      min-height: 200px;
+      a .project {
+      height: auto;
       flex-direction: column;
+      justify-content: flex-start;
       margin-bottom: 30px;
 
         img {
@@ -194,7 +196,7 @@
         div {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: flex-start;
           text-align: center;
           width: 80%;
           height: auto;

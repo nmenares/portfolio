@@ -94,7 +94,7 @@ button:focus, input:focus {
   #navBar {
     justify-content: center;
   }
-  #navBar img {
+  #navBar #name {
     margin: 0px;
   }
   #navBar #contactInfo {
@@ -217,13 +217,14 @@ button:focus, input:focus {
 
 @media all and (max-width: 940px) {
   #content {
-    max-height: 1000px;
-    min-height: 800px;
+    height: auto;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
+    margin-bottom: 30px;
   }
   #content #myInfo {
+    height: auto;
     width: 100%;
     max-width: 800px;
   }
@@ -237,14 +238,13 @@ button:focus, input:focus {
     margin-bottom: 30px;
   }
   #content #myInfo #description img {
-    width: 200px;
-    height: 220px;
+    width: 100%;
+    height: auto;
     padding: 2px;
-    border: 1px solid #ffffff;
     margin-bottom: 20px;
   }
   #content #myInfo #description #text {
-    min-height: 220px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -262,21 +262,23 @@ button:focus, input:focus {
   }
   #content #projects-section {
     width: 100%;
+    height: auto;
   }
-  #content #projects-section .project {
-    min-height: 200px;
+  #content #projects-section a .project {
+    height: auto;
     flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: 30px;
   }
-  #content #projects-section .project img {
+  #content #projects-section a .project img {
     width: 80px;
     height: auto;
     margin-right: 2.5%;
   }
-  #content #projects-section .project div {
+  #content #projects-section a .project div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-align: center;
     width: 80%;
     height: auto;
