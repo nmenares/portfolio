@@ -67,7 +67,7 @@ button:focus, input:focus {
   background-color: #ffffff;
   border-bottom: 1px solid #252839;
   width: 100%;
-  height: 80px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -114,7 +114,7 @@ button:focus, input:focus {
   justify-content: center;
   height: 500px;
   margin-bottom: 80px;
-  margin-top: 130px;
+  margin-top: 80px;
 }
 #content #myInfo {
   height: 100%;
@@ -178,41 +178,38 @@ button:focus, input:focus {
   justify-content: flex-start;
   max-width: 600px;
   height: 500px;
-  overflow-y: auto;
   width: 49%;
 }
-#content #projects-section .project {
+#content #projects-section a .project {
   display: flex;
   flex-direction: row;
   align-items: center;
   min-height: 70px;
   max-width: 500px;
-  padding: 20px 0px;
-  margin: 20px 0px;
 }
-#content #projects-section .project img {
+#content #projects-section a .project img {
   width: 100px;
   height: auto;
   margin-right: 2.5%;
 }
-#content #projects-section .project div {
+#content #projects-section a .project div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 80%;
   padding: 20px;
 }
-#content #projects-section .project div h1 {
+#content #projects-section a .project div h1 {
   font-size: 110%;
   padding-bottom: 5px;
   letter-spacing: 1px;
 }
-#content #projects-section .project div h2 {
+#content #projects-section a .project div h2 {
   font-size: 80%;
   padding-bottom: 10px;
   letter-spacing: 1px;
 }
-#content #projects-section .project div h3 {
+#content #projects-section a .project div h3 {
   line-height: 150%;
   font-size: 80%;
   font-weight: 500;
@@ -287,26 +284,6 @@ button:focus, input:focus {
     padding: 20px;
   }
 }
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #7984EB;
-}
-
-::-webkit-scrollbar-track:hover {
-  background: #ffffff;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #4c56a9;
-}
-
 #skills {
   width: 80%;
   display: flex;

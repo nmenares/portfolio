@@ -5,7 +5,7 @@
   justify-content: center;
   height: 500px;
   margin-bottom: 80px;
-  margin-top: 130px;
+  margin-top: 80px;
 
   #myInfo{
     height: 100%;
@@ -77,18 +77,15 @@
     justify-content: flex-start;
     max-width: 600px;
     height: 500px;
-    overflow-y: auto;
     width: 49%;
     
     
-    .project {
+    a .project {
       display: flex;
       flex-direction: row;
       align-items: center;
       min-height: 70px;
       max-width: 500px;
-      padding: 20px 0px;
-      margin: 20px 0px;
 
       img {
         width: 100px;
@@ -209,22 +206,4 @@
   }
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
 
-::-webkit-scrollbar-track {
-    background: #ffffff; 
-}
- 
-::-webkit-scrollbar-thumb {
-    background: #7984EB; 
-}
-
-::-webkit-scrollbar-track:hover {
-    background: #ffffff; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(76, 86, 169); 
-}
