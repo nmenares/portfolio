@@ -2,6 +2,12 @@ window.onbeforeunload = function() {
   window.scrollTo(0, 0);
 };
 
+window.onscroll = function() {
+  var navbar = document.getElementById("navBar");
+  if (this.screenY >= 20) { navbar.style.boxShadow= "0px 0px 21px #252839";}
+  if (this.screenY < 20) { navbar.style.boxShadow = "none"; }
+};
+
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
