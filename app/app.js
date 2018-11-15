@@ -44,23 +44,67 @@ function makeTransparent(e){
 // timeline
 const timeline = document.getElementById("timeLine");
 timeline.addEventListener("click", openYear);
+let id;
+let content;
 
 const tl_content = document.getElementById("timeline-content");
 
 function openYear(e){
   e.preventDefault();
+  id = e.target.id;
+  content = document.getElementById(`tl-${id}`);
+
   Array.from(timeline.children).forEach(el => {
-    if (el === e.target) { el.classList.add("selected");} 
-    else { el.classList.remove("selected");}
+    if (el === e.target) { el.classList.add("selected") } 
+    else { el.classList.remove("selected"); }
   });  
-  
-  let id = e.target.id;
-  let content = document.getElementById(`tl-${id}`);
+    
   Array.from(tl_content.children).forEach (el => {
     if (el === content) { el.classList.remove("hidden");}
     else { el.classList.add("hidden");}
   });  
 };
+
+//swipe timeline on mobile
+tl_content.addEventListener("touchmove", e => e.preventDefault());
+tl_content.addEventListener("touchstart", handleStartTouching);
+tl_content.addEventListener("touchend", handleEndTouching);
+
+let startX,
+    endX,
+    startY,
+    dist,
+    threshold = 150,
+    allowedTime = 200,
+    elapsedTime,
+    startTime
+
+function handleSwipe(){
+  if (id){ 
+    if(dist > 0){ console.log("working condition left swipe") }
+    else { console.log("working condition right swipe")};
+  } else { console.log("no condition to swipe") } ;
+};
+
+function handleStartTouching(e){
+  e.preventDefault();
+  const touchObj = e.changedTouches[0];
+  dist = 0;
+  startX = touchObj.pageX;
+  startY = touchObj.pageY;
+  startTime = new Date().getTime();
+};
+
+function handleEndTouching(e){
+  e.preventDefault();
+  const touchObj = e.changedTouches[0];
+  endX = touchObj.pageX;
+  dist = endX - startX;
+  elapsedTime = new Date().getTime() - startTime;
+  const rightSwipeBol = (elapsedTime <= allowedTime && Math.abs(dist) >= threshold && Math.abs(touchObj.pageY - startY) <= 100)
+  if(rightSwipeBol) { handleSwipe(); };
+};
+
 
 
 //quote
