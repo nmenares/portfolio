@@ -3,12 +3,12 @@ window.onbeforeunload = function() {
 };
 
 window.onscroll = function() {
-  var navbar = document.getElementById("navBar");
+  const navbar = document.getElementById("navBar");
   if (this.screenY >= 20) { navbar.style.boxShadow= "0px 0px 21px #252839";}
 };
 
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.fillStyle = "#ffffff";
@@ -45,8 +45,7 @@ function makeTransparent(e){
 const timeline = document.getElementById("timeLine");
 timeline.addEventListener("click", openYear);
 
-const tl_content = document.getElementById("timeline-content")
-
+const tl_content = document.getElementById("timeline-content");
 
 function openYear(e){
   e.preventDefault();
@@ -63,6 +62,8 @@ function openYear(e){
   });  
 };
 
+
+//quote
 document.addEventListener("DOMContentLoaded", getAPI);
 let default_content = document.getElementById("quote");
 let quote = document.createElement("p");
