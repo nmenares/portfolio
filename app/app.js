@@ -74,7 +74,7 @@ let startX,
     endX,
     startY,
     dist,
-    threshold = 150,
+    threshold = 50,
     allowedTime = 200,
     elapsedTime,
     startTime
