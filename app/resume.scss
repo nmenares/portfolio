@@ -32,8 +32,10 @@
       color: #FF9F00;
     }
 
-    li:hover {
-      color: #FF9F00;
+    @media all and (min-width: 941px) {
+      li:hover {
+        color: #FF9F00;
+      }
     }
 
   }
@@ -90,6 +92,7 @@
 }
 
 @media all and (max-width: 940px){
+
   #timeline-content {
     margin: 10px;
     margin-top: -40px;

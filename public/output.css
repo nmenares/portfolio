@@ -340,8 +340,10 @@ button:focus, input:focus {
 #timeLine .selected {
   color: #FF9F00;
 }
-#timeLine li:hover {
-  color: #FF9F00;
+@media all and (min-width: 941px) {
+  #timeLine li:hover {
+    color: #FF9F00;
+  }
 }
 
 #timeline-content {
