@@ -81,9 +81,29 @@ let startX,
 
 function handleSwipe(){
   if (id){ 
-    if(dist > 0){ console.log("working condition left swipe") }
-    else { console.log("working condition right swipe")};
-  } else { console.log("no condition to swipe") } ;
+    if (dist > 0 && id !== "2012"){ 
+      id = (parseInt(id ,10) - 1).toString();
+      Array.from(timeline.children).forEach(el => {
+        if (el.id === id) { el.classList.add("selected") }
+        else { el.classList.remove("selected"); }
+      }); 
+    }
+    else if (dist < 0 && id !== "2018"){ 
+      id = (parseInt(id, 10) + 1).toString();
+      Array.from(timeline.children).forEach(el => {
+        if (el.id === id) { el.classList.add("selected") }
+        else { el.classList.remove("selected"); }
+      }); 
+    };
+  };
+
+  content = document.getElementById(`tl-${id}`);
+
+  Array.from(tl_content.children).forEach(el => {
+    if (el === content) { el.classList.remove("hidden"); }
+    else { el.classList.add("hidden"); }
+  });  
+
 };
 
 function handleStartTouching(e){
