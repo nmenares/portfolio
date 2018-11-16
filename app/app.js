@@ -84,22 +84,24 @@ function handleSwipe(){
   if (year){ 
     if (dist > 0 && year.id !== "2012"){
       year.classList.remove("selected");
+      content.classList.add("hidden");
       id = (parseInt(year.id ,10) - 1).toString();
       year = document.getElementById(`${id}`);
+      content = document.getElementById(`tl-${id}`);
       year.classList.add("selected");
+      content = document.getElementById(`tl-${id}`);
+      content.classList.remove("hidden");
+      
     } else if (dist < 0 && year.id !== "2018"){ 
       year.classList.remove("selected");
+      content.classList.add("hidden");
       id = (parseInt(year.id, 10) + 1).toString();
       year = document.getElementById(`${id}`);
+      content = document.getElementById(`tl-${id}`);
       year.classList.add("selected");
+      content = document.getElementById(`tl-${id}`);
+      content.classList.remove("hidden");
     };
-
-    content = document.getElementById(`tl-${id}`);
-
-    Array.from(tl_content.children).forEach(el => {
-      if (el === content) { el.classList.remove("hidden"); }
-      else { el.classList.add("hidden"); }
-    });  
   };
 };
 
