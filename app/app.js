@@ -52,10 +52,11 @@ const tl_content = document.getElementById("timeline-content");
 function openYear(e){
   e.preventDefault();
   id = e.target.id;
+  year = document.getElementById(`${id}`);
   content = document.getElementById(`tl-${id}`);
 
   Array.from(timeline.children).forEach(el => {
-    if (el === e.target) { el.classList.add("selected") } 
+    if (el === year) { el.classList.add("selected") } 
     else { el.classList.remove("selected"); }
   });  
     
@@ -80,19 +81,17 @@ let startX,
     startTime
 
 function handleSwipe(){
-  if (id){ 
-    if (dist > 0 && id !== "2012"){
-      let ex_id = document.getElementById(`${id}`);
-      id = (parseInt(id ,10) - 1).toString();
-      let ac_id = document.getElementById(`${id}`);
-      ac_id.classList.add("selected");
-      ex_id.classList.remove("selected");
-    } else if (dist < 0 && id !== "2018"){ 
-      let ex_id = document.getElementById(`${id}`);
-      id = (parseInt(id, 10) + 1).toString();
-      let ac_id = document.getElementById(`${id}`);
-      ac_id.classList.add("selected");
-      ex_id.classList.remove("selected");
+  if (year){ 
+    if (dist > 0 && year.id !== "2012"){
+      year.classList.remove("selected");
+      id = (parseInt(year.id ,10) - 1).toString();
+      year = document.getElementById(`${id}`);
+      year.classList.add("selected");
+    } else if (dist < 0 && year.id !== "2018"){ 
+      year.classList.remove("selected");
+      id = (parseInt(year.id, 10) + 1).toString();
+      year = document.getElementById(`${id}`);
+      year.classList.add("selected");
     };
 
     content = document.getElementById(`tl-${id}`);
