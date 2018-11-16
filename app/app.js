@@ -7,6 +7,7 @@ window.onscroll = function() {
   if (this.screenY >= 20) { navbar.style.boxShadow= "0px 0px 21px #252839";}
 };
 
+//canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -40,12 +41,11 @@ function makeTransparent(e){
   ctx.fill(); 
 }
 
-
 // timeline
 const timeline = document.getElementById("timeLine");
 timeline.addEventListener("click", openYear);
-let id;
-let content;
+let id,
+    content
 
 const tl_content = document.getElementById("timeline-content");
 
@@ -74,32 +74,29 @@ tl_content.addEventListener("touchend", handleEndTouching);
 let startX,
     endX,
     dist,
-    threshold = 50,
-    allowedTime = 200,
     elapsedTime,
     startTime
+
+const threshold = 50,
+      allowedTime = 200
+
+function changeYear(x){
+  year.classList.remove("selected");
+  content.classList.add("hidden");
+  id = (parseInt(year.id, 10) + x).toString();
+  year = document.getElementById(`${id}`);
+  content = document.getElementById(`tl-${id}`);
+  year.classList.add("selected");
+  content = document.getElementById(`tl-${id}`);
+  content.classList.remove("hidden");
+};
 
 function handleSwipe(){
   if (year){ 
     if (dist > 0 && year.id !== "2012"){
-      year.classList.remove("selected");
-      content.classList.add("hidden");
-      id = (parseInt(year.id ,10) - 1).toString();
-      year = document.getElementById(`${id}`);
-      content = document.getElementById(`tl-${id}`);
-      year.classList.add("selected");
-      content = document.getElementById(`tl-${id}`);
-      content.classList.remove("hidden");
-      
+      changeYear(-1);     
     } else if (dist < 0 && year.id !== "2018"){ 
-      year.classList.remove("selected");
-      content.classList.add("hidden");
-      id = (parseInt(year.id, 10) + 1).toString();
-      year = document.getElementById(`${id}`);
-      content = document.getElementById(`tl-${id}`);
-      year.classList.add("selected");
-      content = document.getElementById(`tl-${id}`);
-      content.classList.remove("hidden");
+      changeYear(1);
     };
   };
 };
@@ -122,12 +119,10 @@ function handleEndTouching(e){
   if(rightSwipeBol) { handleSwipe(); };
 };
 
-
-
 //quote
 document.addEventListener("DOMContentLoaded", getAPI);
-let default_content = document.getElementById("quote");
-let quote = document.createElement("p");
+const default_content = document.getElementById("quote");
+const quote = document.createElement("p");
 
 function getAPI(e) {
   fetch("https://quotes.rest/qod")
