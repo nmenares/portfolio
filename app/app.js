@@ -81,29 +81,27 @@ let startX,
 
 function handleSwipe(){
   if (id){ 
-    if (dist > 0 && id !== "2012"){ 
+    if (dist > 0 && id !== "2012"){
+      let ex_id = document.getElementById(`${id}`);
       id = (parseInt(id ,10) - 1).toString();
-      Array.from(timeline.children).forEach(el => {
-        if (el.id === id) { el.classList.add("selected") }
-        else { el.classList.remove("selected"); }
-      }); 
-    }
-    else if (dist < 0 && id !== "2018"){ 
+      let ac_id = document.getElementById(`${id}`);
+      ac_id.classList.add("selected");
+      ex_id.classList.remove("selected");
+    } else if (dist < 0 && id !== "2018"){ 
+      let ex_id = document.getElementById(`${id}`);
       id = (parseInt(id, 10) + 1).toString();
-      Array.from(timeline.children).forEach(el => {
-        if (el.id === id) { el.classList.add("selected") }
-        else { el.classList.remove("selected"); }
-      }); 
+      let ac_id = document.getElementById(`${id}`);
+      ac_id.classList.add("selected");
+      ex_id.classList.remove("selected");
     };
+
+    content = document.getElementById(`tl-${id}`);
+
+    Array.from(tl_content.children).forEach(el => {
+      if (el === content) { el.classList.remove("hidden"); }
+      else { el.classList.add("hidden"); }
+    });  
   };
-
-  content = document.getElementById(`tl-${id}`);
-
-  Array.from(tl_content.children).forEach(el => {
-    if (el === content) { el.classList.remove("hidden"); }
-    else { el.classList.add("hidden"); }
-  });  
-
 };
 
 function handleStartTouching(e){
