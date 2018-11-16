@@ -73,7 +73,6 @@ tl_content.addEventListener("touchend", handleEndTouching);
 
 let startX,
     endX,
-    startY,
     dist,
     threshold = 50,
     allowedTime = 200,
@@ -110,7 +109,6 @@ function handleStartTouching(e){
   const touchObj = e.changedTouches[0];
   dist = 0;
   startX = touchObj.pageX;
-  startY = touchObj.pageY;
   startTime = new Date().getTime();
 };
 
@@ -120,7 +118,7 @@ function handleEndTouching(e){
   endX = touchObj.pageX;
   dist = endX - startX;
   elapsedTime = new Date().getTime() - startTime;
-  const rightSwipeBol = (elapsedTime <= allowedTime && Math.abs(dist) >= threshold && Math.abs(touchObj.pageY - startY) <= 100)
+  const rightSwipeBol = (elapsedTime <= allowedTime && Math.abs(dist) >= threshold);
   if(rightSwipeBol) { handleSwipe(); };
 };
 
