@@ -123,7 +123,7 @@ function changeYear(x) {
 };
 
 function activeScroll(e){
-    window.scrollBy({left: 0, top: (-5 * distY) , behavior: "smooth"});
+    window.scrollBy({left: 0, top: (- 2 * distY) , behavior: "smooth"});
 };
 
 //quote
