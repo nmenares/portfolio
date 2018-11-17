@@ -28,7 +28,7 @@ function write(){
   ctx.fillText("Optimize", 200, 340);
 }
 
-canvas.addEventListener("mousemove", makeTransparent);
+canvas.addEventListener("mousemove", makeTransparent, true);
 
 function makeTransparent(e){
   e.preventDefault();
@@ -43,7 +43,7 @@ function makeTransparent(e){
 
 // timeline
 const timeline = document.getElementById("timeLine");
-timeline.addEventListener("click", openYear);
+timeline.addEventListener("click", openYear, false);
 let id,
     content
 
@@ -67,9 +67,7 @@ function openYear(e){
 };
 
 //swipe timeline on mobile
-tl_content.addEventListener("touchmove", e => e.preventDefault());
-tl_content.addEventListener("touchstart", handleStartTouching);
-tl_content.addEventListener("touchend", handleEndTouching);
+tl_content.addEventListener("touchstart", handleStartTouching, false);
 
 let startX,
     endX,
@@ -80,28 +78,9 @@ let startX,
 const threshold = 50,
       allowedTime = 200
 
-function changeYear(x){
-  year.classList.remove("selected");
-  content.classList.add("hidden");
-  id = (parseInt(year.id, 10) + x).toString();
-  year = document.getElementById(`${id}`);
-  content = document.getElementById(`tl-${id}`);
-  year.classList.add("selected");
-  content = document.getElementById(`tl-${id}`);
-  content.classList.remove("hidden");
-};
-
-function handleSwipe(){
-  if (year){ 
-    if (dist > 0 && year.id !== "2012"){
-      changeYear(-1);     
-    } else if (dist < 0 && year.id !== "2018"){ 
-      changeYear(1);
-    };
-  };
-};
-
 function handleStartTouching(e){
+  tl_content.addEventListener("touchmove", e => e.preventDefault(), false);
+  tl_content.addEventListener("touchend", handleEndTouching, false);
   e.preventDefault();
   const touchObj = e.changedTouches[0];
   dist = 0;
@@ -119,8 +98,29 @@ function handleEndTouching(e){
   if(rightSwipeBol) { handleSwipe(); };
 };
 
+function handleSwipe() {
+  if (year) {
+    if (dist > 0 && year.id !== "2012") {
+      changeYear(-1);
+    } else if (dist < 0 && year.id !== "2018") {
+      changeYear(1);
+    };
+  };
+};
+
+function changeYear(x) {
+  year.classList.remove("selected");
+  content.classList.add("hidden");
+  id = (parseInt(year.id, 10) + x).toString();
+  year = document.getElementById(`${id}`);
+  content = document.getElementById(`tl-${id}`);
+  year.classList.add("selected");
+  content = document.getElementById(`tl-${id}`);
+  content.classList.remove("hidden");
+};
+
 //quote
-document.addEventListener("DOMContentLoaded", getAPI);
+document.addEventListener("DOMContentLoaded", getAPI, true);
 const default_content = document.getElementById("quote");
 const quote = document.createElement("p");
 
