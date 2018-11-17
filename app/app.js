@@ -70,8 +70,9 @@ function openYear(e){
 tl_content.addEventListener("touchstart", handleStartTouching, false);
 
 let startX,
-    endX,
-    dist,
+    startY,
+    distX,
+    distY,
     elapsedTime,
     startTime
 
@@ -83,26 +84,28 @@ function handleStartTouching(e){
   tl_content.addEventListener("touchend", handleEndTouching, false);
   e.preventDefault();
   const touchObj = e.changedTouches[0];
-  dist = 0;
+  distX = 0;
   startX = touchObj.pageX;
+  startY = touchObj.pageY;
   startTime = new Date().getTime();
 };
 
 function handleEndTouching(e){
   e.preventDefault();
   const touchObj = e.changedTouches[0];
-  endX = touchObj.pageX;
-  dist = endX - startX;
+  distX = touchObj.pageX - startX;
+  distY = touchObj.pageY - startY;
   elapsedTime = new Date().getTime() - startTime;
-  const rightSwipeBol = (elapsedTime <= allowedTime && Math.abs(dist) >= threshold);
-  if(rightSwipeBol) { handleSwipe(); };
+  const rightSwipeBol = (elapsedTime <= allowedTime && Math.abs(distX) >= threshold);
+  if(rightSwipeBol) { handleSwipe(); }
+  else if(Math.abs(distY) > 5) { activeScroll(); };
 };
 
 function handleSwipe() {
   if (year) {
-    if (dist > 0 && year.id !== "2012") {
+    if (distX > 0 && year.id !== "2012") {
       changeYear(-1);
-    } else if (dist < 0 && year.id !== "2018") {
+    } else if (distX < 0 && year.id !== "2018") {
       changeYear(1);
     };
   };
@@ -117,6 +120,14 @@ function changeYear(x) {
   year.classList.add("selected");
   content = document.getElementById(`tl-${id}`);
   content.classList.remove("hidden");
+};
+
+function activeScroll(e){
+  if(distY > 0){
+    window.scrollBy({left: 0, top: -400, behavior: "smooth"});
+  }else{
+    window.scrollBy({left: 0, top: 400, behavior: "smooth" });
+  };
 };
 
 //quote
