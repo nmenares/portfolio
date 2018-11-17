@@ -98,7 +98,7 @@ function handleEndTouching(e){
   elapsedTime = new Date().getTime() - startTime;
   const rightSwipeBol = (elapsedTime <= allowedTime && Math.abs(distX) >= threshold);
   if(rightSwipeBol) { handleSwipe(); }
-  else if(Math.abs(distY) > 0) { activeScroll(); };
+  else if(Math.abs(distY) > 2) { activeScroll(); };
 };
 
 function handleSwipe() {
