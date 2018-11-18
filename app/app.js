@@ -12,11 +12,14 @@ window.onscroll = function() {
 //mobilemenu
 const myName = document.getElementById("name");
 myName.addEventListener("touchstart", openMenu_1, false);
+let counter = 0;
 
 function openMenu_1(e){
   e.preventDefault();
   myName.addEventListener("touchmove", e => e.preventDefault(), false);
   myName.addEventListener("touchend", openMenu_2, false);
+  const menuList = document.getElementById("menu");
+  const content = document.getElementById("content");
   const touchObj1 = e.changedTouches[0];
   const startMenuX = touchObj1.pageX;
   const startMenuY = touchObj1.pageY;
@@ -28,14 +31,31 @@ function openMenu_1(e){
     const endMenuY = touchObj2.pageY;
     const distMenuX = Math.abs(startMenuX - endMenuX); 
     const distMenuY = Math.abs(startMenuY - endMenuY);
-    if(distMenuX < 2 && distMenuY < 2){
-      const menuList = document.getElementById("menu");
-      const content = document.getElementById("content");
-      navbar.style.position = "static";
-      navbar.style.height = "40px";
-      menuList.style.display = "flex";
-      content.style.marginTop = "40px";   
+
+    if (distMenuX < 2 && distMenuY < 2){  
+      counter += 1;
+      if(counter === 1){
+        openMenu();
+      }else{
+        closeMenu();
+        counter = 0;
+      };
+      
     };
+  };
+
+  function openMenu(){
+    navbar.style.position = "static";
+    navbar.style.height = "40px";
+    menuList.style.display = "flex";
+    content.style.marginTop = "40px";  
+  };
+
+  function closeMenu(){
+    navbar.style.position = "fixed";
+    navbar.style.height = "80px";
+    menuList.style.display = "none";
+    content.style.marginTop = "80px"; 
   };
 };
 
