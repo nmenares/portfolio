@@ -98,14 +98,25 @@ button:focus, input:focus {
     margin: 0px;
   }
   #navBar #contactInfo {
-    width: auto;
-    justify-content: center;
-    margin: 0px;
-  }
-  #navBar #contactInfo img {
-    padding: 10px;
+    display: none;
   }
 }
+#menu {
+  display: none;
+  width: 100%;
+  margin-top: 0;
+  flex-direction: column;
+  align-content: center;
+}
+#menu a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+  border-bottom: 1px solid #252839;
+}
+
 #content {
   width: 90%;
   display: flex;

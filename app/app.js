@@ -2,9 +2,41 @@ window.onbeforeunload = function() {
   window.scrollTo(0, 0);
 };
 
+// navbar
+const navbar = document.getElementById("navBar");
+
 window.onscroll = function() {
-  const navbar = document.getElementById("navBar");
   if (this.screenY >= 20) { navbar.style.boxShadow= "0px 0px 21px #252839";}
+};
+
+//mobilemenu
+const myName = document.getElementById("name");
+myName.addEventListener("touchstart", openMenu_1, false);
+
+function openMenu_1(e){
+  e.preventDefault();
+  myName.addEventListener("touchmove", e => e.preventDefault(), false);
+  myName.addEventListener("touchend", openMenu_2, false);
+  const touchObj1 = e.changedTouches[0];
+  const startMenuX = touchObj1.pageX;
+  const startMenuY = touchObj1.pageY;
+
+  function openMenu_2(ev){
+    ev.preventDefault();
+    const touchObj2 = ev.changedTouches[0];
+    const endMenuX = touchObj2.pageX;
+    const endMenuY = touchObj2.pageY;
+    const distMenuX = Math.abs(startMenuX - endMenuX); 
+    const distMenuY = Math.abs(startMenuY - endMenuY);
+    if(distMenuX < 2 && distMenuY < 2){
+      const menuList = document.getElementById("menu");
+      const content = document.getElementById("content");
+      navbar.style.position = "static";
+      navbar.style.height = "40px";
+      menuList.style.display = "flex";
+      content.style.marginTop = "40px";   
+    };
+  };
 };
 
 //canvas

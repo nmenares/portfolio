@@ -1,0 +1,16 @@
+#menu{
+  display: none;
+  width: 100%;
+  margin-top: 0;
+  flex-direction: column;
+  align-content: center;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    border-bottom: 1px solid #252839; 
+  }
+}
