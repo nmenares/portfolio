@@ -8,12 +8,13 @@
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  box-shadow: 0px 4px 6px #252839;
+  box-shadow: 0px 4px 6px rgba(37,40,57, 0.5);
   
   #name {
     font-size: 110%;
     padding: 10px;
     margin-left: 100px;
+    width: 200px;
   }
   
   #contactInfo {
@@ -36,6 +37,7 @@
   height: 60px; 
   
     #name {
+      text-align: center;
       margin: 0px;
     }
     

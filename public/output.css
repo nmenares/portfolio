@@ -72,12 +72,13 @@ button:focus, input:focus {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  box-shadow: 0px 4px 6px #252839;
+  box-shadow: 0px 4px 6px rgba(37, 40, 57, 0.5);
 }
 #navBar #name {
   font-size: 110%;
   padding: 10px;
   margin-left: 100px;
+  width: 200px;
 }
 #navBar #contactInfo {
   display: flex;
@@ -97,6 +98,7 @@ button:focus, input:focus {
     height: 60px;
   }
   #navBar #name {
+    text-align: center;
     margin: 0px;
   }
   #navBar #contactInfo {

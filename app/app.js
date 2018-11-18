@@ -4,9 +4,15 @@ window.onbeforeunload = function() {
 
 // navbar
 const navbar = document.getElementById("navBar");
+const myName = document.getElementById("name");
+myName.onmouseover = function() {
+  myName.children[0].innerHTML = "Resume";
+  myName.onmouseout = function() {
+    myName.children[0].innerHTML = "Nataly Menares";
+  };
+};
 
 //mobilemenu
-const myName = document.getElementById("name");
 myName.addEventListener("touchstart", openMenu_1, false);
 let counter = 0;
 
