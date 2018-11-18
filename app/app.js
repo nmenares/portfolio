@@ -45,15 +45,14 @@ function openMenu_1(e){
   };
 
   function openMenu(){
-    navbar.style.position = "static";
-    navbar.style.height = "40px";
+    navbar.style.position = "sticky";
+    navbar.style.top = "0px";
     menuList.style.display = "flex";
     content.style.marginTop = "40px";  
   };
 
   function closeMenu(){
     navbar.style.position = "fixed";
-    navbar.style.height = "80px";
     menuList.style.display = "none";
     content.style.marginTop = "80px"; 
   };

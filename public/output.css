@@ -66,7 +66,7 @@ button:focus, input:focus {
   position: fixed;
   background-color: #ffffff;
   width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -93,6 +93,7 @@ button:focus, input:focus {
 @media all and (max-width: 940px) {
   #navBar {
     justify-content: center;
+    height: 60px;
   }
   #navBar #name {
     margin: 0px;
