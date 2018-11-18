@@ -5,10 +5,6 @@ window.onbeforeunload = function() {
 // navbar
 const navbar = document.getElementById("navBar");
 
-window.onscroll = function() {
-  if (this.screenY >= 20) { navbar.style.boxShadow= "0px 0px 21px #252839";}
-};
-
 //mobilemenu
 const myName = document.getElementById("name");
 myName.addEventListener("touchstart", openMenu_1, false);
