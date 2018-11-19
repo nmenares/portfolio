@@ -17,21 +17,8 @@ myName.onmouseover = function() {
 };
 
 //mobilemenu
-let counter = 0;
-
-burguer.onclick = function(e) {
-  e.preventDefault();
-  if (window.scrollY > 0) { counter = 0 };
-  counter += 1;
-  if (counter === 1) {
-    openMenu();
-  } else {
-    closeMenu();
-    counter = 0;
-  };
-};
-
 myName.addEventListener("touchstart", openMenu_1, false);
+let counter = 0;
 
 function openMenu_1(e){
   e.preventDefault();
@@ -50,21 +37,27 @@ function openMenu_1(e){
     const distMenuY = Math.abs(startMenuY - endMenuY);
 
     if (distMenuX < 2 && distMenuY < 2){  
-      if(window.scrollY > 0) { counter = 0 };
-      counter += 1;
-      if(counter === 1){
-        openMenu();
-      }else{
-        closeMenu();
-        counter = 0;
-      };
-      
+      window.scrollTo(0, 0);
+      closeMenu();
+      counter = 0;
     };
   };
 };
 
-function openMenu() {
+burguer.onclick = function (e) {
+  e.preventDefault();
   window.scrollTo(0, 0);
+  if (window.scrollY > 0) { counter = 0 };
+  counter += 1;
+  if (counter === 1) {
+    openMenu();
+  } else {
+    closeMenu();
+    counter = 0;
+  };
+};
+
+function openMenu() {
   navbar.style.position = "sticky";
   navbar.style.top = "0px";
   menuList.style.display = "flex";
@@ -72,7 +65,6 @@ function openMenu() {
 };
 
 function closeMenu() {
-  window.scrollTo(0, 0);
   navbar.style.position = "fixed";
   menuList.style.display = "none";
   content.style.marginTop = "80px";

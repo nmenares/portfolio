@@ -102,6 +102,7 @@ button:focus, input:focus {
   #navBar #name {
     margin: 0px;
     margin-left: 30px;
+    padding-left: 0;
   }
   #navBar #contactInfo {
     display: none;
