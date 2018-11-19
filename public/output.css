@@ -91,18 +91,24 @@ button:focus, input:focus {
 #navBar #contactInfo img {
   margin: 0;
 }
+#navBar #burguer {
+  display: none;
+}
 
 @media all and (max-width: 940px) {
   #navBar {
-    justify-content: center;
     height: 60px;
   }
   #navBar #name {
-    text-align: center;
     margin: 0px;
+    margin-left: 50px;
   }
   #navBar #contactInfo {
     display: none;
+  }
+  #navBar #burguer {
+    display: inline-block;
+    margin-right: 50px;
   }
 }
 #menu {
@@ -117,9 +123,12 @@ button:focus, input:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  padding-left: 30px;
+  font-size: 65%;
   height: 30px;
-  border-bottom: 1px solid #252839;
+  background-color: rgba(37, 40, 57, 0.05);
+  border-bottom: 1px solid #ffffff;
 }
 
 #content {

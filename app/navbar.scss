@@ -28,21 +28,30 @@
     img {
       margin: 0;
     }
+
+  }
+
+  #burguer{
+    display: none;
   }
 }
 
 @media all and (max-width: 940px) {
   #navBar {
-  justify-content: center;
   height: 60px; 
   
     #name {
-      text-align: center;
       margin: 0px;
+      margin-left: 50px;     
     }
     
     #contactInfo {
       display: none;
+    }
+
+    #burguer{
+    display: inline-block;
+    margin-right: 50px; 
     }
   }
 }

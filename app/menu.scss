@@ -10,8 +10,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 65%;
     height: 30px;
-    border-bottom: 1px solid #252839; 
+    background-color: rgba(37,40,57, 0.05);
+    border-bottom: 1px solid #ffffff; 
   }
 }

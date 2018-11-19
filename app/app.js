@@ -5,6 +5,10 @@ window.onbeforeunload = function() {
 // navbar
 const navbar = document.getElementById("navBar");
 const myName = document.getElementById("name");
+const burguer = document.getElementById("burguer");
+const menuList = document.getElementById("menu");
+const content = document.getElementById("content");
+
 myName.onmouseover = function() {
   myName.children[0].innerHTML = "Resume";
   myName.onmouseout = function() {
@@ -13,15 +17,25 @@ myName.onmouseover = function() {
 };
 
 //mobilemenu
-myName.addEventListener("touchstart", openMenu_1, false);
 let counter = 0;
+
+burguer.onclick = function(e) {
+  e.preventDefault();
+  counter += 1;
+  if (counter === 1) {
+    openMenu();
+  } else {
+    closeMenu();
+    counter = 0;
+  };
+};
+
+myName.addEventListener("touchstart", openMenu_1, false);
 
 function openMenu_1(e){
   e.preventDefault();
   myName.addEventListener("touchmove", e => e.preventDefault(), false);
   myName.addEventListener("touchend", openMenu_2, false);
-  const menuList = document.getElementById("menu");
-  const content = document.getElementById("content");
   const touchObj1 = e.changedTouches[0];
   const startMenuX = touchObj1.pageX;
   const startMenuY = touchObj1.pageY;
@@ -45,19 +59,21 @@ function openMenu_1(e){
       
     };
   };
+};
 
-  function openMenu(){
-    navbar.style.position = "sticky";
-    navbar.style.top = "0px";
-    menuList.style.display = "flex";
-    content.style.marginTop = "40px";  
-  };
+function openMenu() {
+  window.scrollTo(0, 0);
+  navbar.style.position = "sticky";
+  navbar.style.top = "0px";
+  menuList.style.display = "flex";
+  content.style.marginTop = "40px";
+};
 
-  function closeMenu(){
-    navbar.style.position = "fixed";
-    menuList.style.display = "none";
-    content.style.marginTop = "80px"; 
-  };
+function closeMenu() {
+  window.scrollTo(0, 0);
+  navbar.style.position = "fixed";
+  menuList.style.display = "none";
+  content.style.marginTop = "80px";
 };
 
 //canvas
@@ -98,7 +114,7 @@ function makeTransparent(e){
 const timeline = document.getElementById("timeLine");
 timeline.addEventListener("click", openYear, false);
 let id,
-    content
+    contentTimeLine
 
 const tl_content = document.getElementById("timeline-content");
 
@@ -106,7 +122,7 @@ function openYear(e){
   e.preventDefault();
   id = e.target.id;
   year = document.getElementById(`${id}`);
-  content = document.getElementById(`tl-${id}`);
+  contentTimeLine = document.getElementById(`tl-${id}`);
 
   Array.from(timeline.children).forEach(el => {
     if (el === year) { el.classList.add("selected") } 
@@ -114,8 +130,11 @@ function openYear(e){
   });  
     
   Array.from(tl_content.children).forEach (el => {
-    if (el === content) { el.classList.remove("hidden");}
-    else { el.classList.add("hidden");}
+    if (el === contentTimeLine) {
+      el.classList.remove("hidden");
+    } else {
+      el.classList.add("hidden");
+    }
   });  
 };
 
@@ -166,13 +185,13 @@ function handleSwipe() {
 
 function changeYear(x) {
   year.classList.remove("selected");
-  content.classList.add("hidden");
+  contentTimeLine.classList.add("hidden");
   id = (parseInt(year.id, 10) + x).toString();
   year = document.getElementById(`${id}`);
-  content = document.getElementById(`tl-${id}`);
+  contentTimeLine = document.getElementById(`tl-${id}`);
   year.classList.add("selected");
-  content = document.getElementById(`tl-${id}`);
-  content.classList.remove("hidden");
+  contentTimeLine = document.getElementById(`tl-${id}`);
+  contentTimeLine.classList.remove("hidden");
 };
 
 function activeScroll(e){
