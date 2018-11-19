@@ -44,11 +44,11 @@ function openMenu_1(e){
   };
 };
 
-burguer.onclick = function (e) {
+burguer.onclick = function(e) {
   e.preventDefault();
-  window.scrollTo(0, 0);
   if (window.scrollY > 0) { counter = 0 };
   counter += 1;
+  window.scrollTo(0, 0);
   if (counter === 1) {
     openMenu();
   } else {

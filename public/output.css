@@ -332,7 +332,10 @@ button:focus, input:focus {
 
 @media all and (max-width: 980px) {
   #skills {
-    padding: 10px 15px;
+    width: 90%;
+  }
+  #skills div {
+    padding: 8px 15px;
   }
 }
 #timeLine {
@@ -406,8 +409,8 @@ button:focus, input:focus {
 }
 
 #quote {
-  background-image: radial-gradient(#7984EB -100%, #ffffff 50%);
-  width: 60%;
+  background-image: radial-gradient(#7984EB -60%, #ffffff 70%);
+  width: 70%;
   font-size: 100%;
   line-height: 200%;
   text-align: center;
@@ -434,6 +437,10 @@ button:focus, input:focus {
     font-size: 80%;
     line-height: 120%;
     text-align: center;
+  }
+
+  #quote {
+    width: 85%;
   }
 }
 #footer {

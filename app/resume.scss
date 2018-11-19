@@ -79,8 +79,8 @@
   }
 
 #quote {
-  background-image: radial-gradient(#7984EB -100%, #ffffff 50%);
-  width: 60%;
+  background-image: radial-gradient(#7984EB -60%, #ffffff 70%);
+  width: 70%;
   font-size: 100%;
   line-height: 200%;
   text-align: center;
@@ -112,6 +112,10 @@
         text-align: center;
       }
     }
+  }
+
+  #quote {
+    width: 85%;
   }
 }
 

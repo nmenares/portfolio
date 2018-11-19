@@ -19,7 +19,10 @@
 
 
 @media all and (max-width: 980px){
-  #skills {
-    padding: 10px 15px;
+  #skills{
+    width: 90%;
+    div{
+    padding: 8px 15px;
+    }
   }
 }
