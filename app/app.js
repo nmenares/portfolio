@@ -21,6 +21,7 @@ let counter = 0;
 
 burguer.onclick = function(e) {
   e.preventDefault();
+  if (window.scrollY > 0) { counter = 0 };
   counter += 1;
   if (counter === 1) {
     openMenu();
@@ -49,6 +50,7 @@ function openMenu_1(e){
     const distMenuY = Math.abs(startMenuY - endMenuY);
 
     if (distMenuX < 2 && distMenuY < 2){  
+      if(window.scrollY > 0) { counter = 0 };
       counter += 1;
       if(counter === 1){
         openMenu();
