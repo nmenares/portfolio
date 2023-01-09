@@ -19,7 +19,7 @@
   <meta name="description" content="Industrial Engineer and Software Developer, with experience in Data Analysis and Growth Engineering. Check out my Portfolio!">
   <meta property="og:title" content="Nataly Menares Portfolio">
   <meta property="og:image" content="public/meta-photo.jpg">
-  <link rel="stylesheet" href="public/output.css" type="text/css">
+  <link rel="stylesheet" href="public/stylesheets/output.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
@@ -27,79 +27,46 @@
   <title>Nataly Menares Portfolio</title>
 </head>
 <body>
-  <span style="font-family: 'Megrim', cursive;">&nbsp;</span>
-  <div id="menu">
-    <a target="_blank" href="public/Nataly Menares Resume.pdf" alt="My Resume"><div>RESUME</div></a>
-    <a target="_blank" href="https://github.com/nmenares" alt="My Github Profile"><div>GITHUB</div></a>
-    <a target="_blank" href="https://www.linkedin.com/in/nmenares/" alt="My Linkedin Profile"><div>LINKEDIN</div></a>
-  </div>
-  <div id="navBar">
-    <div id="name">
-      <a target="_blank" href="public/Nataly Menares Resume.pdf" alt="My Resume">Nataly Menares</a>
-    </div>
-    <div id="contactInfo">
-      <div><a target="_blank" href="https://github.com/nmenares" alt="My Github Profile"><img style="width: 30px;" src="public/github.png"></a></div>
-      <div><a target="_blank" href="https://www.linkedin.com/in/nmenares/" alt="My Linkedin Profile"><img style="width: 35px;" src="public/linkedin.png"></a></div>
-    </div>
-    <div id="burguer"><img style="width: 25px;" src="public/burguer.png"></div>
-  </div>
-  <div id="content">
-    <div id="myInfo">  
-      <div id="description">
-        <img src="public/nataly.jpg" alt="Nataly Menares">
-        <div id="text">
-          <h1>Nataly Menares</h1> 
-          <h2>Marketing Engineer & Frontend Developer</h2>
-          <h3>My background is Industrial Engineering, I have worked as a Data Engineer, Data
-            Analyst, Project Manager, and Marketing Engineer.
-          <br/>
-            Also, I have coded in JavaScript, CSS, HTML, React-Redux.js, and Ruby.
-          </h3>
-          <br/>
-          <h3>
-            Check out my projects!
-          </h3>      
-        </div>
+  <div class="overlay"></div>
+  <div class="nav-bar-wrapper">
+    <div class="nav-bar">
+      <div class="name">Nataly Menares</div>
+      <div class="contact-info">
+        <a target="_blank" href="public/Nataly Menares Resume.pdf" alt="My Resume">
+          <div>Resume</div>
+        </a>
+        <a target="_blank" href="https://github.com/nmenares" alt="My Github Profile">
+          <div>Github</div>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/nmenares/" alt="My Linkedin Profile">
+          <div>LinkedIn</div>
+        </a>
       </div>
-      <canvas id="canvas" width="800" height="500"></canvas>
-    </div> 
-    <div style="width: 2%"></div>
+      <div class="burguer"><img src="public/burguer.png"></div>
+    </div>
+    <div class="vertical-menu">
+      <a target="_blank" href="public/Nataly Menares Resume.pdf" alt="My Resume">
+        <div>&#10149; Resume</div>
+      </a>
+      <a target="_blank" href="https://github.com/nmenares" alt="My Github Profile">
+        <div>&#10149; Github</div>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/nmenares/" alt="My Linkedin Profile">
+        <div>&#10149; LinkedIn</div>
+      </a>
+    </div>
+  </div>
+  <!-- <div id="content">
     <div id="projects-section">
-      <a href="https://knittingwithstrangers.herokuapp.com/#/" target="_blank">
-        <div class="project">
-          <img src="public/yarn-ball.png" alt="Ruby on Rails and JavaScript" />
-          <div>
-            <h1>Knitting With Strangers</h1>
-            <h2>Tea With Strangers clone</h2>
-            <h3>
-              Web app that promotes and organizes meet ups for strangers who enjoy knitting. It allows
-              users to create events, and book spots as guests.
-            </h3>
-          </div>
-        </div>
-      </a>   
       <a href="https://nmenares.github.io/js_someways/" target="_blank">
         <div class="project">
           <img src="public/labyrinth.png" alt="JavaScript and React.js" />
           <div>
             <h1>SomeWays</h1>
-            <h2>Maze game</h2>   
+            <h2>Maze game</h2>
             <h3>
               JavaScript app where the user has to move a ball to the exit point within 60 seconds,
               passing for a green square.
-            </h3>
-          </div>     
-        </div>
-      </a>
-      <a href="https://let-us-eat.herokuapp.com/#/" target="_blank">
-        <div class="project">
-          <img src="public/service.png" alt="MERN and JavaScript" />
-          <div>
-            <h1>Let's Eat</h1>
-            <h2>Restaurant selector</h2>
-            <h3>
-              Website that randomly chooses a restaurant after setting preferences.
-              It shows restaurant details and allows users to save liked restaurants.
             </h3>
           </div>
         </div>
@@ -108,7 +75,7 @@
         <div class="project">
           <img src="public/color-palette.png" alt="Working on" />
           <div>
-            <h1>My Gallery (coming soon)</h1>
+            <h1>My Gallery</h1>
             <h2>Handmade and unique creations</h2>
             <h3>
               I am engineer and amateur artist. This is my gallery, where you can find unique pieces of paintings, jewels and
@@ -118,13 +85,32 @@
         </div>
       </a>
     </div>
+    <div id="my-info">
+      <div id="text">
+        <h1>Born in Chile in 1987</h1>
+        <h1>Living in California since 2016</h1>
+        <h1>•</h1>
+        <h1>Major in Industrial Engineering</h1>
+        <h1>Master in Marketing Management</h1>
+        <h1>Working as a Software Engineer</h1>
+        <h1>•</h1>
+        <h1>Spanish native speaker</h1>
+        <h1>Fluent in English</h1>
+        <h1>•</h1>
+        <h1>Love working on UI projects,</h1>
+        <h1>investing time with my dog,</h1>
+        <h1>making crafts,</h1>
+        <h1>and eating pastries</h1>
+        <h1>♡</h1>
+      </div>
+    </div>
   </div>
   <div id="skills">
     <div>Tableau</div>
     <div>Google Analytics</div>
     <div>Adwords</div>
     <div>SEO</div>
-    <div>SEM</div> 
+    <div>SEM</div>
     <div>JavaScript</div>
     <div>React-Redux.js</div>
     <div>CSS</div>
@@ -150,9 +136,9 @@
       <ul>
         <li>Graduated from Industrial Engineering, Universidad de Chile. Major: Marketing Quantitative.</li>
         <li>Hired as Data Engineer at Kr Consulting.</li>
-      </ul>   
-    </ul>   
-      </ul>   
+      </ul>
+    </ul>
+      </ul>
     </div>
     <div class="hidden" id="tl-2013">
       <img src="public/presentation.png" alt="Facing new professional challenges">
@@ -198,19 +184,15 @@
         </ul>
     </div>
   </div>
-  <div id="quote"></div>
+  <div id="quote"></div> -->
   <div id="footer">
     <div id="footer1">
       <div>
         <img src="public/email.png">
         <a href="mailto:nataly.menares@gmail.com"> nataly.menares@gmail.com</a>
       </div>
-      <div>
-        <img src="public/smartphone.png">
-        <div>(650) 250-6864</div>
-      </div>   
-    </div>   
-    <div id="footer2">© Nataly Menares • 2018</div> 
+    </div>
+    <div id="footer2">Nataly Menares • Vanilla Javascript • 2022</div>
   </div>
   <script src="app/app.js"></script>
 </body>
