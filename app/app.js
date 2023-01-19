@@ -4,22 +4,27 @@ window.onbeforeunload = function () {
 
 // burguer behavior: Click opens/closes menu
 const burguer = document.getElementsByClassName("burguer")[0];
-const verticalMenu = document.getElementsByClassName("vertical-menu")[0];
+const close = document.getElementsByClassName("close")[0];
 const overlay = document.getElementsByClassName("overlay")[0];
 let menuIsOpen = false;
 
 function openMenu() {
   overlay.classList.remove("hide-overlay");
   overlay.classList.add("show-overlay");
-  verticalMenu.style.display = "flex";
-  verticalMenu.style.flexDirection = "column";
+  burguer.classList.remove("show");
+  burguer.classList.add("hide");
+  close.classList.remove("hide");
+  close.classList.add("show");
   menuIsOpen = !menuIsOpen;
 }
 
 function closeMenu() {
   overlay.classList.remove("show-overlay");
   overlay.classList.add("hide-overlay");
-  verticalMenu.style.display = "none";
+  close.classList.remove("show");
+  close.classList.add("hide");
+  burguer.classList.remove("hide");
+  burguer.classList.add("show");
   menuIsOpen = !menuIsOpen;
 }
 
@@ -27,8 +32,12 @@ window.addEventListener("resize", closeMenu);
 
 burguer.onclick = (e) => {
   e.preventDefault();
-  if (menuIsOpen) closeMenu();
-  else openMenu();
+  openMenu();
+};
+
+close.onclick = (e) => {
+  e.preventDefault();
+  closeMenu();
 };
 
 overlay.onclick = (e) => {
