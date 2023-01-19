@@ -71,62 +71,6 @@ overlay.onclick = (e) => {
 // }
 
 // canvas
-const canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
-context.globalCompositeOperation = "source-over";
-context.imageSmoothingEnabled = true;
-context.imageSmoothingQuality = "low";
-
-const palette = [
-  [36, 120, 143],
-  [132, 141, 171],
-  [171, 204, 177],
-];
-
-const getGradients = () => {
-  return palette.map(([r, g, b]) => {
-    const gradient = context.createRadialGradient(0, 0, 1, 0, 0, 50);
-    gradient.addColorStop(0, `rgba(${r},${g},${b},0.05)`);
-    gradient.addColorStop(0.2, `rgba(${r},${g},${b},0.1)`);
-    gradient.addColorStop(0.4, `rgba(${r},${g},${b},0.2)`);
-    gradient.addColorStop(0.6, `rgba(${r},${g},${b},0.3)`);
-    gradient.addColorStop(0.8, `rgba(${r},${g},${b},0.1)`);
-    gradient.addColorStop(1, `rgba(${r},${g},${b},0)`);
-    return gradient;
-  });
-};
-
-const gradients = getGradients();
-
-const watercolor = () => {
-  return {
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    color: gradients[Math.floor(Math.random() * palette.length)],
-    radio: Math.ceil((Math.random() * canvas.width) / 2),
-    duration: Math.ceil(Math.random() * 2000),
-  };
-};
-
-const drawWatercolor = (wc) => {
-  context.save();
-  context.globalAlpha = 100 / wc.duration;
-  context.translate(wc.x, wc.y);
-  context.beginPath();
-  context.arc(0, 0, wc.radio, 0, Math.PI * 2);
-  context.fillStyle = wc.color;
-  context.fill();
-  context.restore();
-};
-
-const getAndDrawWatercolor = () => {
-  const wc = watercolor();
-  drawWatercolor(wc);
-};
-
-setInterval(() => {
-  getAndDrawWatercolor();
-}, 100);
 
 // ctx.beginPath();
 // ctx.fillStyle = "#ffffff";
