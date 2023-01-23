@@ -3,32 +3,37 @@ window.onbeforeunload = function () {
 };
 
 // burguer behavior: Click opens/closes menu
+const global = document.getElementsByClassName("global")[0];
+const home = document.getElementsByClassName("home")[0];
 const burguer = document.getElementsByClassName("burguer")[0];
 const close = document.getElementsByClassName("close")[0];
-const overlay = document.getElementsByClassName("overlay")[0];
-let menuIsOpen = false;
+const menu = document.getElementsByClassName("menu")[0];
 
 function openMenu() {
-  overlay.classList.remove("hide-overlay");
-  overlay.classList.add("show-overlay");
+  home.classList.remove("show");
+  home.classList.add("hide");
+  menu.classList.remove("hide");
+  menu.classList.add("show");
   burguer.classList.remove("show");
   burguer.classList.add("hide");
   close.classList.remove("hide");
   close.classList.add("show");
-  menuIsOpen = !menuIsOpen;
+  global.classList.add("pink");
+  global.classList.remove("dark");
 }
 
 function closeMenu() {
-  overlay.classList.remove("show-overlay");
-  overlay.classList.add("hide-overlay");
-  close.classList.remove("show");
-  close.classList.add("hide");
+  menu.classList.remove("show");
+  menu.classList.add("hide");
+  home.classList.remove("hide");
+  home.classList.add("show");
   burguer.classList.remove("hide");
   burguer.classList.add("show");
-  menuIsOpen = !menuIsOpen;
+  close.classList.remove("show");
+  close.classList.add("hide");
+  global.classList.add("dark");
+  global.classList.remove("pink");
 }
-
-window.addEventListener("resize", closeMenu);
 
 burguer.onclick = (e) => {
   e.preventDefault();
@@ -36,11 +41,6 @@ burguer.onclick = (e) => {
 };
 
 close.onclick = (e) => {
-  e.preventDefault();
-  closeMenu();
-};
-
-overlay.onclick = (e) => {
   e.preventDefault();
   closeMenu();
 };

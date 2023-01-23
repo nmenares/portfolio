@@ -20,14 +20,21 @@
   <meta property="og:title" content="Nataly Menares Portfolio">
   <meta property="og:image" content="public/meta-photo.jpg">
   <link rel="stylesheet" href="public/stylesheets/output.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="icon" href="public/icon.ico" type="image/x-icon">
   <title>Nataly Menares Portfolio</title>
 </head>
-<body>
-  <div class="overlay hide-overlay">
+<body class="global dark">
+  <div class="nav-bar-wrapper">
+    <div class="nav-bar">
+      <div class="name">NATALY<span class="lastname">MENARES</span></div>
+      <div class="burguer show"><img src="public/menu.png"></div>
+      <div class="close hide"><img src="public/letter-x.png"></div>
+    </div>
+  </div>
+  <div class="menu hide">
     <div class="vertical-menu">
       <div>HOME</div>
       <div>ABOUT</div>
@@ -36,44 +43,30 @@
       <div>GALLERY</div>
     </div>
   </div>
-  <div class="nav-bar-wrapper">
-    <div class="nav-bar">
-      <div class="name">Nataly Menares</div>
-      <div class="burguer"><img src="public/menu.png"></div>
-      <div class="close hide"><img src="public/letter-x.png"></div>
+  <div class="home show">
+    <div class="home-content">
+      <div class="description">
+        <div class="greeting">
+          <div class="tag">&#60;nataly&#62;</div>
+          <div class="hello">Hello, I am a frontend developer.</div>
+          <div class="tag">&#60;<span class="fake-space"> </span>&#47;nataly&#62;</div>
+        </div>
+      </div>
+      <div class="description">
+        <div class="photo"><img src="public/face.png"></div>
+        <div class="icons">
+          <a href="https://github.com/nmenares" target="_blank">
+            <img src="public/github.png">
+          </a>
+          <a href="https://www.linkedin.com/in/nmenares/" target="_blank">
+            <img src="public/linkedin.png">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- <div id="content">
-    <div id="projects-section">
-      <a href="https://nmenares.github.io/js_someways/" target="_blank">
-        <div class="project">
-          <img src="public/labyrinth.png" alt="JavaScript and React.js" />
-          <div>
-            <h1>SomeWays</h1>
-            <h2>Maze game</h2>
-            <h3>
-              JavaScript app where the user has to move a ball to the exit point within 60 seconds,
-              passing for a green square.
-            </h3>
-          </div>
-        </div>
-      </a>
-      <a href="http://natalymenares.com" target="_blank">
-        <div class="project">
-          <img src="public/color-palette.png" alt="Working on" />
-          <div>
-            <h1>My Gallery</h1>
-            <h2>Handmade and unique creations</h2>
-            <h3>
-              I am engineer and amateur artist. This is my gallery, where you can find unique pieces of paintings, jewels and
-              others.
-            </h3>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div id="my-info">
-      <div id="text">
+  <div class="about hide">
+    <div class="info">
         <h1>Born in Chile in 1987</h1>
         <h1>Living in California since 2016</h1>
         <h1>•</h1>
@@ -85,93 +78,11 @@
         <h1>Fluent in English</h1>
         <h1>•</h1>
         <h1>Love working on UI projects,</h1>
-        <h1>investing time with my dog,</h1>
         <h1>making crafts,</h1>
-        <h1>and eating pastries</h1>
-        <h1>♡</h1>
+        <h1>eating pastries,</h1>
+        <h1>and investing time with my dog Bruno</h1>
       </div>
-    </div>
   </div>
-  <div id="skills">
-    <div>Tableau</div>
-    <div>Google Analytics</div>
-    <div>Adwords</div>
-    <div>SEO</div>
-    <div>SEM</div>
-    <div>JavaScript</div>
-    <div>React-Redux.js</div>
-    <div>CSS</div>
-    <div>HTML</div>
-    <div>Ruby</div>
-    <div>Ruby on Rails</div>
-    <div>SQL</div>
-    <div>Spanish</div>
-    <div>Project Management</div>
-  </div>
-  <ol id="timeLine">
-    <li id="2012"><label>2012</label>&#9679</li>
-    <li id="2013"><label>2013</label>&#9679</li>
-    <li id="2014"><label>2014</label>&#9679</li>
-    <li id="2015"><label>2015</label>&#9679</li>
-    <li id="2016"><label>2016</label>&#9679</li>
-    <li id="2017"><label>2017</label>&#9679</li>
-    <li id="2018"><label>2018</label>&#9679</li>
-  </ol>
-  <div id="timeline-content">
-    <div class="hidden" id="tl-2012">
-      <img src="public/graduation.png" alt="Starting profesional career">
-      <ul>
-        <li>Graduated from Industrial Engineering, Universidad de Chile. Major: Marketing Quantitative.</li>
-        <li>Hired as Data Engineer at Kr Consulting.</li>
-      </ul>
-    </ul>
-      </ul>
-    </div>
-    <div class="hidden" id="tl-2013">
-      <img src="public/presentation.png" alt="Facing new professional challenges">
-      <ul>
-        <li>Worked as Data Engineer at Kr Consulting.</li>
-        <li>Hired as Data Analyst at Telefónica Chile.</li>
-      </ul>
-    </div>
-    <div class="hidden" id="tl-2014">
-      <img src="public/line-chart.png" alt="Leadering significant projects">
-      <ul>
-        <li>Worked as Data Analyst at Telefónica Chile.</li>
-        <li>Leadered Big Data project at Telefónica Chile.</li>
-      </ul>
-    </div>
-    <div class="hidden" id="tl-2015">
-        <img src="public/process.png" alt="From Data Analyst to Project Manager">
-        <ul>
-          <li>Worked as Data Analyst at Telefónica Chile.</li>
-          <li>Promoted as Project Manager at Telefónica Chile.</li>
-          <li>Started Master in Marketing Management at Universidad Diego Portales, Chile.</li>
-        </ul>
-    </div>
-    <div class="hidden" id="tl-2016">
-        <img src="public/university.png" alt="Facing new opportunities">
-        <ul>
-          <li>Got Master in Marketing Management.</li>
-          <li>Moved to the U.S.</li>
-        </ul>
-    </div>
-    <div class="hidden" id="tl-2017">
-        <img src="public/stairs.png" alt="Becoming a Marketing Engineer">
-        <ul>
-          <li>Attended ESL program at De Anza College.</li>
-          <li>Hired as Marketing Engineer at SimpliRoute.</li>
-        </ul>
-    </div>
-    <div class="hidden" id="tl-2018">
-        <img src="public/www.png" alt="Sharpening coding skills">
-        <ul>
-          <li>Worked as Marketing Engineer at SimpliRoute.</li>
-          <li>Graduated from App Academy SF.</li>
-        </ul>
-    </div>
-  </div>
-  <div id="quote"></div> -->
   <div class="footer">
     &#9400; 2023 Nataly Menares • All rights reverved
   </div>

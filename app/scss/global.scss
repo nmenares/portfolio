@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dark {
+  background-color:#2B3A55;
+  color: #ffffff;
+}
+
+.pink {
+  background-color:#CE7777;
+  color: #ffffff;
+}
+
+.show {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+// rose #CE7777
+// light rose #E8C4C4
+// white #F2E5E5

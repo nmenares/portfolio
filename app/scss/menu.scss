@@ -1,0 +1,11 @@
+.menu {
+  width: 100%;
+
+  .vertical-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+  }
+}

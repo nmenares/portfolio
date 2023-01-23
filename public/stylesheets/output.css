@@ -1,7 +1,34 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dark {
+  background-color: #2B3A55;
+  color: #ffffff;
+}
+
+.pink {
+  background-color: #CE7777;
+  color: #ffffff;
+}
+
+.show {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
 .show-overlay {
   width: 100%;
   height: 100vh;
-  background-color: rgba(37, 40, 57, 0.2);
   position: fixed;
   z-index: 1;
   display: flex;
@@ -20,103 +47,101 @@
 }
 
 .nav-bar-wrapper {
-  padding: 0 36px;
+  padding: 20px 36px;
   width: calc(100% - 72px);
-  box-shadow: 0px 4px 6px rgba(37, 40, 57, 0.5);
-  font-size: 110%;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  z-index: 2;
+  font-size: 30px;
 }
 .nav-bar-wrapper .nav-bar {
   width: 100%;
-  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+.nav-bar-wrapper .nav-bar .name .lastname {
+  font-weight: 100;
+}
 .nav-bar-wrapper .nav-bar .burguer img, .nav-bar-wrapper .nav-bar .close img {
-  width: 25px;
-}
-.nav-bar-wrapper .nav-bar .show {
-  display: inline-block;
-}
-.nav-bar-wrapper .nav-bar .hide {
-  display: none;
+  width: 40px;
+  cursor: pointer;
 }
 
-body {
-  margin: 0;
+.home {
+  width: 100%;
 }
-
-#content {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 500px;
-  margin-bottom: 80px;
-  margin-top: 80px;
-}
-#content #my-info {
-  font-size: 24px;
-  background-color: white;
-}
-#content #projects-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: 600px;
-  height: 500px;
-  width: 49%;
-}
-#content #projects-section a .project {
+.home .home-content {
+  padding: 36px 120px;
+  width: calc(100% - 240px);
   display: flex;
   flex-direction: row;
   align-items: center;
-  min-height: 70px;
-  max-width: 500px;
+  align-content: center;
+  gap: 40px;
 }
-#content #projects-section a .project img {
-  width: 100px;
-  height: auto;
-  margin-right: 2.5%;
-}
-#content #projects-section a .project div {
+.home .home-content .description {
+  width: calc(50% - 20px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 80%;
-  padding: 20px;
+  align-items: center;
+  align-content: center;
+  gap: 40px;
+  font-size: 50px;
 }
-#content #projects-section a .project div h1 {
-  font-size: 110%;
-  padding-bottom: 5px;
-  letter-spacing: 1px;
+.home .home-content .description .greeting {
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
-#content #projects-section a .project div h2 {
-  font-size: 80%;
-  padding-bottom: 10px;
-  letter-spacing: 1px;
+.home .home-content .description .greeting .tag {
+  color: #CE7777;
 }
-#content #projects-section a .project div h3 {
-  line-height: 150%;
-  font-size: 80%;
-  font-weight: 500;
-  letter-spacing: 1px;
+.home .home-content .description .greeting .tag .fake-space {
+  font-size: 1px;
+}
+.home .home-content .description .greeting .hello {
+  padding-left: 36px;
+}
+.home .home-content .description .icons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.home .home-content .description .icons img {
+  width: 60px;
+  cursor: pointer;
+}
+.home .home-content .description .photo {
+  display: contents;
+}
+
+@media only screen and (max-width: 800px) {
+  .home {
+    padding: 20px 80px;
+    width: calc(100% - 160px);
+    flex-direction: column;
+    gap: 100px;
+  }
+}
+.menu {
+  width: 100%;
+}
+.menu .vertical-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 30px;
 }
 
 .footer {
   width: 100%;
-  position: absolute;
   bottom: 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  font-size: 16px;
+  padding-bottom: 10px;
 }
 .footer div {
   height: 30px;
