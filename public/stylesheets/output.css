@@ -7,6 +7,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+body .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .dark {
   background-color: #2B3A55;
@@ -115,12 +124,12 @@ body {
   display: contents;
 }
 
-@media only screen and (max-width: 800px) {
-  .home {
+@media screen and (max-width: 800px) {
+  .home .home-content {
     padding: 20px 80px;
     width: calc(100% - 160px);
     flex-direction: column;
-    gap: 100px;
+    gap: 80px;
   }
 }
 .menu {

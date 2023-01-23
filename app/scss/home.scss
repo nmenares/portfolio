@@ -56,12 +56,14 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .home {
-    padding: 20px 80px;
-    width: calc(100% - 160px);
-    flex-direction: column;
-    gap: 100px
+    .home-content {
+      padding: 20px 80px;
+      width: calc(100% - 160px);
+      flex-direction: column;
+      gap: 80px
+    }
   }
 }
 

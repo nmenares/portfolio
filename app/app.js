@@ -45,6 +45,63 @@ close.onclick = (e) => {
   closeMenu();
 };
 
+// canvas
+let dotsArray = [];
+const initialPosition = {
+  x: window.innerWidth,
+  y: window.innerHeight,
+};
+
+const draw = () => {
+  const canvas = document.getElementById("canvasId");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+    console.log("window", window);
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    for (let i = 0; i < 100; i++) {
+      dotsArray[i] = new Dot(
+        initialPosition.x * Math.random(),
+        initialPosition.y * Math.random(),
+        0.005,
+        ctx
+      );
+    }
+
+    anim();
+  }
+};
+
+function Dot(x, y, rotateSpeed, ctx) {
+  this.x = x;
+  this.y = y;
+  this.strokeColor = "#E8C4C4";
+  this.theta = Math.random() * Math.PI * 2;
+  this.rotateSpeed = rotateSpeed;
+  this.t = Math.random() * initialPosition.x;
+
+  this.rotate = () => {
+    this.theta += this.rotateSpeed;
+    this.x = initialPosition.x + Math.cos(this.theta) * this.t;
+    this.y = initialPosition.y + Math.sin(this.theta) * this.t;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, 0.08, 0, Math.PI * 2, true);
+    ctx.fillStyle = this.strokeColor;
+    ctx.fill();
+  };
+}
+
+const anim = () => {
+  requestAnimationFrame(anim);
+
+  dotsArray.forEach((dot) => dot.rotate());
+};
+
+document.body.onload = (e) => {
+  e.preventDefault();
+  draw();
+};
 // const navbar = document.getElementById("navBar");
 // const myName = document.getElementById("name");
 
