@@ -132,15 +132,66 @@ body .content {
     gap: 80px;
   }
 }
-.menu {
+.about {
+  padding: 36px 120px;
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  gap: 40px;
+}
+.about .pictures {
+  width: calc(50% - 100px);
+  min-width: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+.about .pictures img {
   width: 100%;
+}
+.about .info {
+  width: calc(50% - 40px);
+  min-width: 300px;
+  font-size: 12px;
+  text-align: center;
+  background-color: rgba(43, 58, 85, 0.6);
+  border-radius: 100px;
+}
+.about .info .highlight {
+  color: #E8C4C4;
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    padding: 20px;
+    width: calc(100% - 40px);
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+.menu {
+  height: 100%;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .menu .vertical-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  font-size: 30px;
+  font-size: 36px;
+}
+.menu .vertical-menu a {
+  color: white;
+  text-decoration: none;
+}
+.menu .vertical-menu a:hover {
+  color: #2B3A55;
 }
 
 .footer {

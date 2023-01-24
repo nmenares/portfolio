@@ -1,19 +1,30 @@
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
+const routes = {
+  "/": home,
+  "/about": about,
+};
+
+const rootDiv = document.getElementById("root");
+rootDiv.innerHTML = routes[window.location.pathname];
+
+const onNavigate = (pathname) => {
+  closeMenu();
+  window.history.pushState({}, pathname, window.location.origin + pathname);
+  rootDiv.innerHTML = routes[pathname];
+};
+
+window.onpopstate = () => {
+  rootDiv.innerHTML = routes[window.location.pathname];
 };
 
 // burguer behavior: Click opens/closes menu
 const global = document.getElementsByClassName("global")[0];
-const home = document.getElementsByClassName("home")[0];
 const burguer = document.getElementsByClassName("burguer")[0];
 const close = document.getElementsByClassName("close")[0];
 const menu = document.getElementsByClassName("menu")[0];
 
 function openMenu() {
-  home.classList.remove("show");
-  home.classList.add("hide");
-  menu.classList.remove("hide");
-  menu.classList.add("show");
+  menu.style.display = "flex";
+  rootDiv.classList.add("hide");
   burguer.classList.remove("show");
   burguer.classList.add("hide");
   close.classList.remove("hide");
@@ -23,10 +34,8 @@ function openMenu() {
 }
 
 function closeMenu() {
-  menu.classList.remove("show");
-  menu.classList.add("hide");
-  home.classList.remove("hide");
-  home.classList.add("show");
+  menu.style.display = "none";
+  rootDiv.classList.remove("hide");
   burguer.classList.remove("hide");
   burguer.classList.add("show");
   close.classList.remove("show");
