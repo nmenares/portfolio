@@ -4,7 +4,7 @@ const routes = {
 };
 
 const rootDiv = document.getElementById("root");
-rootDiv.innerHTML = routes[window.location.pathname];
+rootDiv.innerHTML = routes[window.location.pathname] || home;
 
 const onNavigate = (pathname) => {
   closeMenu();

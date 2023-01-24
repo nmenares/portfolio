@@ -17,6 +17,9 @@ const home = `
           <a href="https://www.linkedin.com/in/nmenares/" target="_blank">
             <img src="public/linkedin.png">
           </a>
+          <a href="public/cvResume.pdf" target="_blank" alt="resume">
+            <img src="public/resume.png">
+          </a>
         </div>
       </div>
     </div>
