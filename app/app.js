@@ -1,6 +1,8 @@
 const routes = {
   "/": home,
   "/about": about,
+  "/resume": resume,
+  "/projects": projects,
 };
 
 const rootDiv = document.getElementById("root");
@@ -65,7 +67,6 @@ const draw = () => {
   const canvas = document.getElementById("canvasId");
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
-    console.log("window", window);
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 

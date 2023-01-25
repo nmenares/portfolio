@@ -172,6 +172,28 @@ body .content {
     gap: 80px;
   }
 }
+.projects {
+  width: 100%;
+  padding: 36px 120px;
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  gap: 40px;
+}
+.projects .maze, .projects .kws {
+  width: calc(50% - 20px);
+}
+
+@media screen and (max-width: 900px) {
+  .projects {
+    padding: 20px 80px;
+    width: calc(100% - 160px);
+    flex-direction: column;
+    gap: 80px;
+  }
+}
 .menu {
   height: 100%;
   display: none;
