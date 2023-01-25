@@ -9,4 +9,4 @@ I wanted to make a beauty, but simple and easy to navigate portfolio, where I in
 * Projects
 * ...and A little about myself
 
-<img width="1642" alt="Screen Shot 2023-01-25 at 11 23 59" src="https://user-images.githubusercontent.com/33841883/214666286-6a0c52cf-846d-4c70-9c4e-66fb9a30dff7.png">
+<img width="1625" alt="Screen Shot 2023-01-25 at 11 28 54" src="https://user-images.githubusercontent.com/33841883/214667812-5ab3920b-dd1d-4ed2-8141-06f8638acddd.png">
