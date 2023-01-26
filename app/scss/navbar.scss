@@ -1,24 +1,3 @@
-.show-overlay {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .vertical-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-.hide-overlay {
-  display: none;
-}
-
 .nav-bar-wrapper {
   padding: 20px 36px;
   width: calc(100% - 72px);

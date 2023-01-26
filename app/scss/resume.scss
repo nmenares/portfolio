@@ -1,0 +1,46 @@
+.resume-wrapper {
+  padding: 36px 120px;
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 20px;
+
+  .resume {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 20px;
+
+    .resume-details {
+      width: calc(50% - 20px);
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      color: white;
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+  .seemore {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .resume {
+    padding: 20px 80px;
+    width: calc(100% - 160px);
+    flex-direction: column;
+    gap: 80px
+  }
+}

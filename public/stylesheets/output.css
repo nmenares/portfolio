@@ -35,24 +35,12 @@ body .content {
   display: none;
 }
 
-.show-overlay {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.show-overlay .vertical-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.highlight {
+  color: #E8C4C4;
 }
 
-.hide-overlay {
-  display: none;
+#root {
+  height: 100%;
 }
 
 .nav-bar-wrapper {
@@ -77,6 +65,8 @@ body .content {
 
 .home {
   width: 100%;
+  height: 100%;
+  display: flex;
 }
 .home .home-content {
   padding: 36px 120px;
@@ -160,9 +150,6 @@ body .content {
   background-color: rgba(43, 58, 85, 0.6);
   border-radius: 100px;
 }
-.about .info .highlight {
-  color: #E8C4C4;
-}
 
 @media screen and (max-width: 900px) {
   .about {
@@ -188,6 +175,48 @@ body .content {
 
 @media screen and (max-width: 900px) {
   .projects {
+    padding: 20px 80px;
+    width: calc(100% - 160px);
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+.resume-wrapper {
+  padding: 36px 120px;
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 20px;
+}
+.resume-wrapper .resume {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 20px;
+}
+.resume-wrapper .resume .resume-details {
+  width: calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  color: white;
+}
+.resume-wrapper .resume .resume-details h1 {
+  font-size: 24px;
+}
+.resume-wrapper .seemore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.resume-wrapper .seemore a {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .resume {
     padding: 20px 80px;
     width: calc(100% - 160px);
     flex-direction: column;
