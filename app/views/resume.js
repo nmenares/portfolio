@@ -27,7 +27,7 @@ const resume = `
   </div>
   <div class="seemore">
     <a href="public/resume.pdf" target="_blank" alt="resume">
-      <img src="https://nmenares.github.io/portfolio/public/resume.png">
+      <img src="https://nmenares.github.io/portfolio/public/pinkResume.png">
     </a>
   </div>
 </div>
