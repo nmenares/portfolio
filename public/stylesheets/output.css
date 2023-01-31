@@ -55,6 +55,10 @@ body .content {
   justify-content: space-between;
   align-items: center;
 }
+.nav-bar-wrapper .nav-bar .name {
+  color: white;
+  text-decoration: none;
+}
 .nav-bar-wrapper .nav-bar .name .lastname {
   font-weight: 100;
 }
