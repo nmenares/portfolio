@@ -81,9 +81,10 @@ const initialPosition = {
 const draw = () => {
   const canvas = document.getElementById("canvasId");
   if (canvas.getContext) {
+    console.log("global", global.getBoundingClientRect());
     const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+    canvas.height = global.offsetHeight;
+    canvas.width = global.offsetWidth;
 
     for (let i = 0; i < 100; i++) {
       dotsArray[i] = new Dot(
