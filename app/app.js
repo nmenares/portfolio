@@ -56,6 +56,21 @@ close.onclick = (e) => {
   closeMenu();
 };
 
+//resume interaction
+
+const showDetails = (index) => {
+  const resumeBrief = document.getElementsByClassName("resume-brief");
+  const resumeDetails = document.getElementsByClassName("resume-details");
+  Array.prototype.forEach.call(resumeBrief, (element, i) => {
+    resumeDetails[i].classList.add("hide");
+    element.classList.remove("selected");
+    if (index === i) {
+      resumeDetails[i].classList.remove("hide");
+      element.classList.add("selected");
+    }
+  });
+};
+
 // canvas
 let dotsArray = [];
 const initialPosition = {
