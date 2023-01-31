@@ -96,7 +96,7 @@ function Dot(x, y, rotateSpeed, ctx) {
     this.x = initialPosition.x + Math.cos(this.theta) * this.t;
     this.y = initialPosition.y + Math.sin(this.theta) * this.t;
     ctx.beginPath();
-    ctx.arc(this.x, this.y, 0.08, 0, Math.PI * 2, true);
+    ctx.arc(this.x, this.y, 0.1, 0, Math.PI * 2, true);
     ctx.fillStyle = this.strokeColor;
     ctx.fill();
   };
