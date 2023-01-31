@@ -26,7 +26,7 @@ const resume = `
     <div class="resume-box">skills</div>
   </div>
   <div class="seemore">
-    <a href="public/cvResume.pdf" target="_blank" alt="resume">
+    <a href="public/resume.pdf" target="_blank" alt="resume">
       <img src="https://nmenares.github.io/portfolio/public/resume.png">
     </a>
   </div>
