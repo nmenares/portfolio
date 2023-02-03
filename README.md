@@ -4,7 +4,7 @@ This is my 2023 [portfolio](https://nmenares.github.io/portfolio/). I built it w
 I wanted to make a beauty, but simple and easy to navigate portfolio, where I included:
 
 * Canvas Animation
-* Links to Linkedin and Github
+* Links to [Linkedin](https://www.linkedin.com/in/nmenares/) and Github
 * Resume
 * Projects
 * ...and A little about myself
