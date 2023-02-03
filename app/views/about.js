@@ -1,7 +1,7 @@
 const about = `
   <div class="about">
     <div class="pictures">
-      <img src="https://nmenares.github.io/portfolio/public/collage.png">
+      <img src="https://nmenares.github.io/portfolio/public/collage.jpg">
     </div>
     <div class="info">
       <h1>Born in <span class="highlight">Chile</span> in 1987</h1>
