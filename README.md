@@ -1,5 +1,5 @@
 # Nataly's Portfolio
-This is my 2023 [portfolio](https://nmenares.github.io/#). I built it with Javascript.
+This is my 2023 [portfolio](https://nmenares.github.io/portfolio/). I built it with Javascript.
 
 I wanted to make a beauty, but simple and easy to navigate portfolio, where I included:
 
