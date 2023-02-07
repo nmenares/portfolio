@@ -64,7 +64,7 @@ const resume = `
     </div>
   </div>
   <div class="resume-container">
-    <a href="public/resume.pdf" target="_blank" alt="resume">
+    <a href="https://nmenares.github.io/portfolio/public/resume.pdf" target="_blank" alt="resume">
       <img src="https://nmenares.github.io/portfolio/public/resume.png">
     </a>
   </div>
