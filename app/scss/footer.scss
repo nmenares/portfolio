@@ -1,4 +1,5 @@
 .footer {
+  background-color: rgba(43, 58, 85, 0.8);
   width: 100%;
   bottom: 0px;
   display: flex;
@@ -6,6 +7,7 @@
   justify-content: center;
   font-size: 16px;
   padding-bottom: 10px;
+  padding-top: 10px;
   position: fixed;
 
   div {

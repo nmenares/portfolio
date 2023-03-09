@@ -2,6 +2,9 @@
   padding: 20px 36px;
   width: calc(100% - 72px);
   font-size: 30px;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(43, 58, 85, 0.8);
 
   .nav-bar {
     width: 100%;
@@ -16,14 +19,6 @@
 
       .lastname {
         font-weight: 100;
-      }
-    }
-
-    .burguer, .close {
-
-      img {
-        width: 40px;
-        cursor: pointer;
       }
     }
   }

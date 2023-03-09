@@ -1,5 +1,5 @@
 const resume = `
-<div class="resume-view">
+<div class="resume-view reveal">
   <div class="resume-wrapper">
     <div class="resume">
       <div class="resume-brief selected" onclick="showDetails(0)">

@@ -1,63 +1,34 @@
-const routes = {
-  "/": home,
-  "/about": about,
-  "/resume": resume,
-  "/projects": projects,
-};
-
 const rootDiv = document.getElementById("root");
-rootDiv.innerHTML = routes[window.location.pathname] || home;
+rootDiv.innerHTML = home + about + resume;
 
-const onNavigate = (pathname) => {
-  closeMenu();
-  window.history.pushState({}, pathname, window.location.origin + pathname);
-  rootDiv.innerHTML = routes[pathname];
-};
+function goTop() {
+  window.scrollTo(0, 0);
+}
 
-window.onpopstate = () => {
-  rootDiv.innerHTML = routes[window.location.pathname];
-};
+window.onbeforeunload = goTop;
 
-// burguer behavior: Click opens/closes menu
 const global = document.getElementsByClassName("global")[0];
-const burguer = document.getElementsByClassName("burguer")[0];
-const close = document.getElementsByClassName("close")[0];
-const menu = document.getElementsByClassName("menu")[0];
 
-function openMenu() {
-  menu.style.display = "flex";
-  rootDiv.classList.add("hide");
-  burguer.classList.remove("show");
-  burguer.classList.add("hide");
-  close.classList.remove("hide");
-  close.classList.add("show");
-  global.classList.add("pink");
-  global.classList.remove("dark");
+// basic page interaction
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
 }
 
-function closeMenu() {
-  menu.style.display = "none";
-  rootDiv.classList.remove("hide");
-  burguer.classList.remove("hide");
-  burguer.classList.add("show");
-  close.classList.remove("show");
-  close.classList.add("hide");
-  global.classList.add("dark");
-  global.classList.remove("pink");
-}
-
-burguer.onclick = (e) => {
-  e.preventDefault();
-  openMenu();
-};
-
-close.onclick = (e) => {
-  e.preventDefault();
-  closeMenu();
-};
+window.addEventListener("scroll", reveal);
 
 //resume interaction
-
 const showDetails = (index) => {
   const resumeBrief = document.getElementsByClassName("resume-brief");
   const resumeDetails = document.getElementsByClassName("resume-details");
@@ -81,7 +52,6 @@ const initialPosition = {
 const draw = () => {
   const canvas = document.getElementById("canvasId");
   if (canvas.getContext) {
-    console.log("global", global.getBoundingClientRect());
     const ctx = canvas.getContext("2d");
     canvas.height = global.offsetHeight;
     canvas.width = global.offsetWidth;
