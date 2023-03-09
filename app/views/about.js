@@ -1,5 +1,5 @@
 const about = `
-  <div class="about reveal">
+  <div class="about display">
     <div class="pictures">
       <img src="https://nmenares.github.io/portfolio/public/collage.jpg">
     </div>

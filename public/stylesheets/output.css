@@ -57,18 +57,18 @@ body .content {
   justify-content: center;
   align-items: center;
 }
-#root .home, #root .reveal {
+#root .home, #root .display {
   height: 100vh;
 }
 
-.reveal {
+.display {
   position: relative;
-  transform: translateY(150px);
+  transform: translateY(100px);
   opacity: 0;
   transition: 1s all ease;
 }
 
-.reveal.active {
+.display.active {
   transform: translateY(0);
   opacity: 1;
 }

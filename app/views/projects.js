@@ -1,5 +1,5 @@
 const projects = `
-<div class="projects reveal">
+<div class="projects display">
   <div class="maze">
     Maze
   </div>

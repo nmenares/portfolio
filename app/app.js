@@ -10,23 +10,23 @@ window.onbeforeunload = goTop;
 const global = document.getElementsByClassName("global")[0];
 
 // basic page interaction
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
+const display = () => {
+  const pages = document.querySelectorAll(".display");
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+  for (let i = 0; i < pages.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = pages[i].getBoundingClientRect().top;
+    const elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
+      pages[i].classList.add("active");
     } else {
-      reveals[i].classList.remove("active");
+      pages[i].classList.remove("active");
     }
   }
-}
+};
 
-window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", display);
 
 //resume interaction
 const showDetails = (index) => {
