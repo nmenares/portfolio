@@ -1,9 +1,9 @@
 const rootDiv = document.getElementById("root");
 rootDiv.innerHTML = home + about + resume;
 
-function goTop() {
+const goTop = () => {
   window.scrollTo(0, 0);
-}
+};
 
 window.onbeforeunload = goTop;
 
