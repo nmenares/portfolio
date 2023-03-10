@@ -73,6 +73,11 @@ body .content {
   opacity: 1;
 }
 
+@media screen and (max-width: 940px) {
+  #root .home, #root .display {
+    height: fit-content;
+  }
+}
 .nav-bar-wrapper {
   padding: 20px 36px;
   width: calc(100% - 72px);
@@ -149,18 +154,38 @@ body .content {
   display: contents;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 940px) {
   .home .home-content {
-    padding: 20px 80px;
-    width: calc(100% - 160px);
+    padding-top: 76px;
+    padding-left: 40px;
+    width: calc(100% - 40px);
     flex-direction: column;
-    gap: 80px;
+    gap: 50px;
+  }
+  .home .home-content .description {
+    width: 100%;
+    gap: 30px;
+    font-size: 40px;
+  }
+  .home .home-content .description .icons {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .home .home-content .description .icons img {
+    width: 40px;
+    cursor: pointer;
+  }
+  .home .home-content .description .photo img {
+    width: 80%;
+    max-width: 400px;
   }
 }
 .about {
   background-color: #E8C4C4;
-  padding: 36px 120px;
-  width: calc(100% - 240px);
+  padding: 36px 100px;
+  width: calc(100% - 200px);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -182,17 +207,33 @@ body .content {
   width: calc(50% - 40px);
   min-width: 300px;
   font-size: 12px;
+  padding: 10px;
   text-align: center;
   background-color: rgba(43, 58, 85, 0.6);
   border-radius: 5px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .about {
-    padding: 20px;
+    padding: 50px 20px;
     width: calc(100% - 40px);
     flex-direction: column;
-    gap: 80px;
+    gap: 50px;
+  }
+  .about .pictures {
+    width: calc(100% - 20px);
+    min-width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+  }
+  .about .pictures img {
+    width: 100%;
+  }
+  .about .info {
+    width: calc(100% - 20px);
+    min-width: 100px;
   }
 }
 .projects {
@@ -273,7 +314,7 @@ body .content {
   padding: 36px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .resume-view {
     padding: 20px;
     width: calc(100% - 40px);

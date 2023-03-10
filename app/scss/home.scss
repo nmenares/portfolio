@@ -60,13 +60,39 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 940px) {
   .home {
     .home-content {
-      padding: 20px 80px;
-      width: calc(100% - 160px);
+      padding-top: 76px;
+      padding-left: 40px;
+      width: calc(100% - 40px);
       flex-direction: column;
-      gap: 80px
+      gap: 50px;
+
+      .description {
+        width: 100%;
+        gap: 30px;
+        font-size: 40px;
+
+        .icons {
+          padding-bottom: 30px;
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+
+          img {
+            width: 40px;
+            cursor: pointer;
+          }
+        }
+
+        .photo {
+          img {
+            width: 80%;
+            max-width: 400px;
+          }
+        }
+      }
     }
   }
 }

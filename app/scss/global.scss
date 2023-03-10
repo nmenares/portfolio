@@ -75,6 +75,16 @@ body {
   opacity: 1;
 }
 
+@media screen and (max-width: 940px) {
+
+  #root {
+    .home, .display {
+      height: fit-content;
+    }
+  }
+
+}
+
 // rose #CE7777
 // light rose #E8C4C4
 // white #F2E5E5

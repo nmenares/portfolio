@@ -1,7 +1,7 @@
 .about {
   background-color: #E8C4C4;
-  padding: 36px 120px;
-  width: calc(100% - 240px);
+  padding: 36px 100px;
+  width: calc(100% - 200px);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,17 +25,36 @@
     width: calc(50% - 40px);
     min-width: 300px;
     font-size: 12px;
+    padding: 10px;
     text-align: center;
     background-color: rgba(43, 58, 85, 0.6);
     border-radius: 5px;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .about {
-    padding: 20px;
+    padding: 50px 20px;
     width: calc(100% - 40px);
     flex-direction: column;
-    gap: 80px
+    gap: 50px;
+
+    .pictures {
+      width: calc(100% - 20px);
+      min-width: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .info {
+      width: calc(100% - 20px);
+      min-width: 100px;
+    }
   }
 }
