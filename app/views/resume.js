@@ -7,9 +7,8 @@ const resume = `
         <div class="big-text highlight">
           Fullstack Developer
         </div>
-        <div>
-          <a class="text-white" target="_blank" href="https://www.mikmak.com/"> @MikMak</a>
-          , New York, NY
+        <div class="company-info">
+          <a class="text-white" target="_blank" href="https://www.mikmak.com/"> @MikMak</a>, New York, NY
         </div>
       </div>
       <div class="resume-brief" onclick="showDetails(1)">
@@ -17,10 +16,9 @@ const resume = `
         <div class="big-text highlight">
           Frontend Developer
         </div>
-        <div>
+        <div class="company-info">
           <a class="text-white" target="_blank" href="https://www.alteryx.com/about-us/lore-io"> @Lore IO
-          </a> (Acquired by Alteryx)
-          , Sunnyvale, CA
+          </a> (Acquired by Alteryx), Sunnyvale, CA
         </div>
       </div>
       <div class="resume-brief" onclick="showDetails(2)">
@@ -28,9 +26,8 @@ const resume = `
         <div class="big-text highlight">
           Marketing Engineer
         </div>
-        <div>
-          <a class="text-white" target="_blank" href="https://simpliroute.com/en-us"> @SimpliRoute</a>
-          , Santiago, Chile
+        <div class="company-info">
+          <a class="text-white" target="_blank" href="https://simpliroute.com/en-us"> @SimpliRoute</a>, Santiago, Chile
         </div>
       </div>
     </div>

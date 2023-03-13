@@ -265,7 +265,6 @@ body .content {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  justify-content: center;
 }
 .resume-view .resume-wrapper {
   width: 100%;
@@ -334,25 +333,30 @@ body .content {
   .resume-view .resume-wrapper .resume {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     gap: 20px;
   }
   .resume-view .resume-wrapper .resume .resume-brief {
-    display: none;
+    width: calc(100% - 32px);
   }
   .resume-view .resume-wrapper .resume .selected {
     cursor: pointer;
     display: none;
     padding: 16px;
-    width: 60%;
     height: fit-content;
-    min-width: 180px;
     display: flex;
     flex-direction: column;
     color: white;
     background-color: rgba(43, 58, 85, 0.6);
     border: 2px solid #CE7777;
+  }
+  .resume-view .resume-wrapper .resume :not(.selected) .small-text {
+    color: #CE7777;
+    font-size: 16px;
+  }
+  .resume-view .resume-wrapper .resume :not(.selected) .big-text, .resume-view .resume-wrapper .resume :not(.selected) .company-info {
+    display: none;
   }
   .resume-view .resume-wrapper .selected-description .resume-details {
     background-color: rgba(43, 58, 85, 0.6);
