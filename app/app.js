@@ -10,7 +10,7 @@ async function addHtml() {
   rootDiv.innerHTML = homeHtml + aboutHtml + resumeHtml;
 }
 
-await addHtml();
+addHtml();
 
 const goTop = () => {
   window.scrollTo(0, 0);
