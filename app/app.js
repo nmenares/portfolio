@@ -1,5 +1,40 @@
 const rootDiv = document.getElementById("root");
-rootDiv.innerHTML = home + about + resume;
+
+fetch("./app/views/home.html")
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (html) {
+    rootDiv.innerHTML = html;
+    console.log(html);
+  })
+  .catch(function (err) {
+    console.warn("Something went wrong.", err);
+  });
+
+fetch("./app/views/about.html")
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (html) {
+    rootDiv.innerHTML += html;
+    console.log(html);
+  })
+  .catch(function (err) {
+    console.warn("Something went wrong.", err);
+  });
+
+fetch("./app/views/resume.html")
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (html) {
+    rootDiv.innerHTML += html;
+    console.log(html);
+  })
+  .catch(function (err) {
+    console.warn("Something went wrong.", err);
+  });
 
 const goTop = () => {
   window.scrollTo(0, 0);
