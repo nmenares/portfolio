@@ -1,40 +1,16 @@
 const rootDiv = document.getElementById("root");
 
-fetch("./app/views/home.html")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (html) {
-    rootDiv.innerHTML = html;
-    console.log(html);
-  })
-  .catch(function (err) {
-    console.warn("Something went wrong.", err);
-  });
+async function addHtml() {
+  const home = await fetch("./app/views/home.html");
+  const about = await fetch("./app/views/about.html");
+  const resume = await fetch("./app/views/resume.html");
+  const homeHtml = home.text;
+  const aboutHtml = about.text;
+  const resumeHtml = resume.text;
+  rootDiv.innerHTML = homeHtml + aboutHtml + resumeHtml;
+}
 
-fetch("./app/views/about.html")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (html) {
-    rootDiv.innerHTML += html;
-    console.log(html);
-  })
-  .catch(function (err) {
-    console.warn("Something went wrong.", err);
-  });
-
-fetch("./app/views/resume.html")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (html) {
-    rootDiv.innerHTML += html;
-    console.log(html);
-  })
-  .catch(function (err) {
-    console.warn("Something went wrong.", err);
-  });
+await addHtml();
 
 const goTop = () => {
   window.scrollTo(0, 0);
