@@ -119,6 +119,8 @@
           border: 2px solid #CE7777;
           border-radius: 5px;
           padding: 8px 8px 8px 2px;
+          height: 300px;
+          overflow-y: scroll;
 
           ul>li {
             line-height: 30px;
