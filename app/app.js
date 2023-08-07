@@ -1,13 +1,17 @@
 const rootDiv = document.getElementById("root");
 
 async function addHtml() {
-  const home = await fetch("./app/views/home.html");
-  const about = await fetch("./app/views/about.html");
-  const resume = await fetch("./app/views/resume.html");
-  const homeHtml = home.text;
-  const aboutHtml = about.text;
-  const resumeHtml = resume.text;
-  rootDiv.innerHTML = homeHtml + aboutHtml + resumeHtml;
+  try {
+    const home = await fetch("./app/views/home.html");
+    const about = await fetch("./app/views/about.html");
+    const resume = await fetch("./app/views/resume.html");
+    const homeHtml = await home.text();
+    const aboutHtml = await about.text();
+    const resumeHtml = await resume.text();
+    rootDiv.innerHTML = homeHtml + aboutHtml + resumeHtml;
+  } catch (e) {
+    console.log("Loading page error:", e);
+  }
 }
 
 addHtml();
