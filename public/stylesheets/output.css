@@ -16,6 +16,9 @@ body .content {
   flex-direction: column;
   justify-content: space-between;
 }
+a {
+  color: #ffffff;
+}
 
 .dark {
   background-color: #2B3A55;
