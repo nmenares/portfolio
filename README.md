@@ -4,6 +4,7 @@ This is my 2023 [portfolio](https://nmenares.github.io/portfolio/). I built it w
 I wanted to make a beauty, but simple and easy to navigate portfolio, where I included:
 
 * Canvas Animation
+* Sass to style (sass --watch app/scss/input.scss:public/stylesheets/output.css)
 * Links to [Linkedin](https://www.linkedin.com/in/nmenares/) and Github
 * Resume
 * Projects
