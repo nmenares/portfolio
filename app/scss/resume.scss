@@ -18,11 +18,11 @@
       display: flex;
       flex-direction: row;
       align-content: center;
+      align-items: center;
       gap: 20px;
 
       .resume-brief {
-        cursor: pointer;
-        width: calc(50% - 20px);
+        width: calc(100% - 20px);
         padding: 16px;
         height: fit-content;
         min-width: 180px;
@@ -36,7 +36,6 @@
       }
 
       .selected {
-        border: 2px solid #CE7777;
         opacity: 1;
       }
 
@@ -45,7 +44,6 @@
     .selected-description {
       .resume-details {
         background-color: rgba(43, 58, 85, 0.6);
-        border: 2px solid #CE7777;
         border-radius: 5px;
         padding: 16px;
 
@@ -62,6 +60,25 @@
     flex-direction: row;
     justify-content: center;
     padding: 36px;
+  }
+}
+
+#balls-map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+
+  .ball {
+    cursor: pointer;
+    background-color: #E8C4C4;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+  }
+
+  .selected {
+    background-color: #CE7777;
   }
 }
 
@@ -94,7 +111,6 @@
           opacity: 0.5;
         }
         .selected {
-          cursor: pointer;
           display: none;
           padding: 16px;
           height: fit-content;

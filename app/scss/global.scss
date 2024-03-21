@@ -22,6 +22,11 @@ a {
   color: #ffffff;
 }
 
+
+.button {
+  cursor: pointer;
+}
+
 .dark {
   background-color:#2B3A55; //rgb(43, 58, 85);
   color: #ffffff;
@@ -44,8 +49,16 @@ a {
   color: #E8C4C4;
 }
 
+.highlight2 {
+  color: #CE7777;
+}
+
 .text-white {
   color: #FFFFFF;
+}
+
+.huge-text {
+  font-size: 100px;
 }
 
 .big-text {
