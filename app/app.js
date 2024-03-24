@@ -140,10 +140,13 @@ async function addHtml() {
     const home = await fetch("./app/views/home.html");
     const about = await fetch("./app/views/about.html");
     const resume = await fetch("./app/views/resume.html");
+    const projects = await fetch("./app/views/projects.html");
     const homeHtml = await home.text();
     const aboutHtml = await about.text();
     const resumeHtml = await resume.text();
-    rootDiv.innerHTML = homeHtml + aboutHtml + resumeHtml;
+    const projectsHtml = await projects.text();
+
+    rootDiv.innerHTML = homeHtml + aboutHtml + resumeHtml + projectsHtml;
 
     ballsMapDiv = document.getElementById("balls-map");
 
