@@ -279,14 +279,12 @@ a {
   width: calc(100% - 240px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
+  justify-content: space-between;
 }
 .resume-view .resume-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
   gap: 20px;
 }
 .resume-view .resume-wrapper .resume {
@@ -344,6 +342,23 @@ a {
 }
 #balls-map .selected {
   background-color: #CE7777;
+}
+
+#accomplishments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+#accomplishments div {
+  padding: 8px;
+  color: #E8C4C4;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media screen and (max-width: 940px) {

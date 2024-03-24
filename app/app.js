@@ -8,6 +8,7 @@ let roleDiv;
 let companyDiv;
 let baseDiv;
 let descriptionDiv;
+let accomplishmentsDiv;
 
 const history = [
   {
@@ -25,6 +26,10 @@ const history = [
       "Successfully orchestrated the development timeline to introduce the new version of the product in January 2024, meeting both internal and market expectations.",
       "Integrated myself into the Product Management realm by engaging in User Experience Research (UXR) interviews and crafting a comprehensive roadmap for our existing product.",
     ],
+    accomplishments: [
+      "New platform launched in January 2024, in less that 1 month of development.",
+      "Build standalone AI bot chat-alike website to be tested by client's customers.",
+    ],
   },
   {
     title: "Jeweler and Shopify Manager",
@@ -37,6 +42,10 @@ const history = [
       "Spearheade the launch and operations of my own business, focusing on the meticulous crafting and sale of handmade jewelry.",
       "Utilize online platforms such as Shopify and Instagram to establish digital footprint. ",
       "Engage in organizing and participating in physical art fairs, broadening the exposure of my distinctive creations while also providing a platform for fellow local artisans to showcase their work.",
+    ],
+    accomplishments: [
+      "Become a Shopify expert, build up my store and my Jewelry brand.",
+      "Provide artisans women a place to sell their products (popups and online).",
     ],
   },
   {
@@ -54,6 +63,10 @@ const history = [
       "Unit test every feature being added in order to ensure there is no negative impact to the user experience.",
       "Dispatch and analyze logs on Amplitude and Datadog to understand product performance and user experience.",
     ],
+    accomplishments: [
+      "Tutor my colleagues in Big Query and SQL.",
+      "Be part of DE&I committee to improve company culture.",
+    ],
   },
   {
     title: "Frontend Developer",
@@ -68,6 +81,10 @@ const history = [
       "Collect colleagues and customers feedback to improve our product.",
       "Improve frontend application loading performance by 50%.",
     ],
+    accomplishments: [
+      "Implement and lead code review sessions",
+      "Mentor new hires in Ember.js and Semantic-ui.",
+    ],
   },
   {
     title: "Marketing Engineer",
@@ -81,6 +98,10 @@ const history = [
       "Created Tableau dashboards to keep the company informed about marketing action results.",
       "Increased by 100% demo requests within the first three months and got more than 300 new users on a monthly basis.",
     ],
+    accomplishments: [
+      "Support chilean startup to get more leads and users.",
+      "Get familiar with web development technologies (webflow, html, and css).",
+    ],
   },
   {
     title: "Marketing Project Manager",
@@ -93,6 +114,7 @@ const history = [
     details: [
       "Managed Push Notification Advertisement Campaigns, increasing related revenue by 500%.",
     ],
+    accomplishments: ["Mentor my colleagues in database skills and tools."],
   },
   {
     title: "Marketing Data Analyst",
@@ -105,6 +127,10 @@ const history = [
     details: [
       "Collaborated directly with Project and Product Managers to obtain key data and extract the necessary information to make impact-based decisions about their projects.",
       "Led Roaming campaigns using airport telecommunication antennas to prove the power of Geolocation and Real time campaigns. Roaming sales increased by 5%.",
+    ],
+    accomplishments: [
+      "Prove the power of Geolocation and Real time campaigns via Big Data.",
+      "Get company-sponsored Master's scholarship to advance my studies in Marketing Management",
     ],
   },
 ];
@@ -135,6 +161,7 @@ async function addHtml() {
     companyDiv = document.getElementById("company");
     baseDiv = document.getElementById("base");
     descriptionDiv = document.getElementById("description");
+    accomplishmentsDiv = document.getElementById("accomplishments");
 
     showDetails();
   } catch (e) {
@@ -199,6 +226,14 @@ const showDetails = () => {
     const item = document.createElement("li");
     item.innerHTML = d;
     list.appendChild(item);
+  });
+
+  accomplishmentsDiv.innerHTML = "";
+
+  history[historyIndex].accomplishments.forEach((a) => {
+    const accomplishment = document.createElement("div");
+    accomplishment.innerHTML = a;
+    accomplishmentsDiv.appendChild(accomplishment);
   });
 };
 
