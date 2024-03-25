@@ -253,17 +253,26 @@ a {
   }
 }
 .projects {
-  width: 100%;
-  padding: 36px 120px;
-  width: calc(100% - 240px);
-  display: flex;
-  flex-direction: row;
+  background-color: #E8C4C4;
+  padding: 36px 100px;
+  width: calc(100% - 200px);
+  display: grid;
+  flex-direction: column;
   align-items: center;
   align-content: center;
   gap: 40px;
 }
-.projects .maze, .projects .kws {
-  width: calc(50% - 20px);
+.projects .project-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.projects .project-2 div {
+  width: 300px;
+}
+.projects .project-2 div a {
+  color: #2B3A55;
 }
 
 @media screen and (max-width: 900px) {
